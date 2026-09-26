@@ -1,0 +1,6 @@
+{
+  "name": "X-ION Campaign Intelligence",
+  "description": "Campaign Intelligence Infrastructure: data pipelines, analytics engines, and real-time execution tools for data-driven campaign strategy.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
