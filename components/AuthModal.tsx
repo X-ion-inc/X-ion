@@ -42,7 +42,7 @@ export function AuthModal({ isOpen, type, initialEmail = '', onClose }: AuthModa
 
         <div>
           <h3 className="text-xl sm:text-2xl font-extrabold text-gray-950 tracking-tight">
-            {type === 'signup' ? 'Get started for free' : 'Log in to Buffer'}
+            {type === 'signup' ? 'Get started for free' : 'Log in to X-ion'}
           </h3>
           <p className="mt-1 text-xs text-gray-500">
             {type === 'signup' 
@@ -55,7 +55,7 @@ export function AuthModal({ isOpen, type, initialEmail = '', onClose }: AuthModa
           <div className="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 text-emerald-800 text-center space-y-1.5 animate-in zoom-in-95">
             <Check className="w-6 h-6 text-emerald-600 mx-auto" />
             <div className="font-bold text-sm">Account connected!</div>
-            <div className="text-xs text-emerald-700">Redirecting to your Buffer publishing queue...</div>
+            <div className="text-xs text-emerald-700">Redirecting to your X-ion publishing queue...</div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -120,7 +120,7 @@ export function AuthModal({ isOpen, type, initialEmail = '', onClose }: AuthModa
             </div>
 
             <p className="text-[11px] text-gray-400 text-center pt-2">
-              By clicking sign up, you agree to Buffer&apos;s Terms of Service and Privacy Policy.
+              By clicking sign up, you agree to X-ion&apos;s Terms of Service and Privacy Policy.
             </p>
           </form>
         )}

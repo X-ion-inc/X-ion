@@ -26,7 +26,7 @@ export function CustomerSupportSection() {
 
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <a
-                href="https://support.buffer.com/"
+                href="https://support.x-ion.com/"
                 className="px-5 py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-200 transition-colors inline-flex items-center gap-1.5"
               >
                 <HelpCircle className="w-4 h-4" />
@@ -45,12 +45,12 @@ export function CustomerSupportSection() {
             </div>
 
             <p className="text-xs text-gray-500 leading-relaxed">
-              We prioritize customer connection as a company and you could end up speaking with a teammate in any role at Buffer, from Marketers to Engineers.
+              We prioritize customer connection as a company and you could end up speaking with a teammate in any role at X-ion, from Marketers to Engineers.
             </p>
 
             <div>
               <a
-                href="https://buffer.com/about"
+                href="https://x-ion.com/about"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-900 hover:text-[#2c4bff] transition-colors group"
               >
                 <span>Learn more about our global team</span>

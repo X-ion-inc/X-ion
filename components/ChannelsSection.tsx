@@ -43,7 +43,7 @@ export function ChannelsSection() {
               </div>
 
               <div className="mt-1 text-[11px] text-gray-400 font-mono flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                <span>Buffer × {ch.name.split(' ')[0]}</span>
+                <span>X-ion × {ch.name.split(' ')[0]}</span>
                 <ArrowRight className="w-2.5 h-2.5" />
               </div>
             </a>

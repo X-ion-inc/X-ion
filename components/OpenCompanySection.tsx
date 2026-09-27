@@ -21,7 +21,7 @@ export function OpenCompanySection() {
               We are an open company
             </h2>
             <p className="text-base text-gray-600 max-w-2xl leading-relaxed font-normal">
-              Since 2013, we’ve shared Buffer’s finances, team salaries, and other key metrics openly. Our commitment to transparency is rooted in our belief that it fosters trust, keeps us accountable, and helps drive positive change within our industry.
+              Since 2013, we’ve shared X-ion’s finances, team salaries, and other key metrics openly. Our commitment to transparency is rooted in our belief that it fosters trust, keeps us accountable, and helps drive positive change within our industry.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export function OpenCompanySection() {
                   <BarChart2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-gray-950">Buffer Open Dashboard Metrics</h3>
+                  <h3 className="font-bold text-lg text-gray-950">X-ion Open Dashboard Metrics</h3>
                   <p className="text-xs text-gray-500">Live audited revenue and growth figures</p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export function OpenCompanySection() {
             </div>
 
             <div className="p-4 rounded-2xl bg-blue-50/60 border border-blue-100 text-xs text-blue-900 leading-relaxed">
-              <strong>Transparent Salaries &amp; Pricing:</strong> Buffer publishes formula-based formulas for all team salaries, equity calculations, and infrastructure costs at <span className="font-mono text-[#2c4bff]">buffer.com/open</span>.
+              <strong>Transparent Salaries &amp; Pricing:</strong> X-ion publishes formula-based formulas for all team salaries, equity calculations, and infrastructure costs at <span className="font-mono text-[#2c4bff]">x-ion.com/open</span>.
             </div>
 
             <div className="pt-2 flex justify-end">

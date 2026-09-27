@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Buffer: Social media management for everyone",
-  description: "Use Buffer to manage your social media so that you can create and share your content everywhere, consistently. Try our forever free plan or upgrade for more.",
+  title: "X-ion: Social media management for everyone",
+  description: "Use X-ion to manage your social media so that you can create and share your content everywhere, consistently. Try our forever free plan or upgrade for more.",
   openGraph: {
-    title: "Buffer: Social media management for everyone",
-    description: "Use Buffer to manage your social media so that you can create and share your content everywhere, consistently. Try our forever free plan or upgrade for more.",
-    url: "https://buffer.com",
-    siteName: "Buffer: All-you-need social media toolkit for small businesses",
+    title: "X-ion: Social media management for everyone",
+    description: "Use X-ion to manage your social media so that you can create and share your content everywhere, consistently. Try our forever free plan or upgrade for more.",
+    url: "https://x-ion.com",
+    siteName: "X-ion: All-you-need social media toolkit for small businesses",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@buffer",
-    creator: "@buffer",
-    title: "Buffer: Social media management for everyone",
-    description: "Use Buffer to manage your social media so that you can create and share your content everywhere, consistently. Try our forever free plan or upgrade for more.",
+    site: "@xion",
+    creator: "@xion",
+    title: "X-ion: Social media management for everyone",
+    description: "Use X-ion to manage your social media so that you can create and share your content everywhere, consistently. Try our forever free plan or upgrade for more.",
   },
 };
 
@@ -28,8 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="https://buffer.com/icons/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="https://buffer.com/icons/apple-touch-icon.png" />
+        <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
       </head>
       <body className="min-h-screen bg-[#fafafa] text-gray-900 antialiased selection:bg-blue-100 selection:text-blue-900">
         {children}

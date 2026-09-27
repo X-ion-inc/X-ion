@@ -20,12 +20,12 @@ export function CoreFeaturesSection() {
                 Publish
               </span>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://buffer.com/publish" className="hover:underline">
+                <a href="https://x-ion.com/publish" className="hover:underline">
                   The most complete set of publishing integrations, ever
                 </a>
               </h3>
 
-              {/* Interactive preview illustration of Buffer Publish */}
+              {/* Interactive preview illustration of X-ion Publish */}
               <div className="mt-8 rounded-2xl bg-white border border-pink-100 shadow-sm p-4 sm:p-5 space-y-3.5 select-none">
                 <div className="flex items-center justify-between pb-3 border-b border-gray-100 text-xs">
                   <div className="flex items-center gap-2 font-semibold text-gray-900">
@@ -70,7 +70,7 @@ export function CoreFeaturesSection() {
                 Schedule your content to the most popular platforms including Facebook, Instagram, TikTok, LinkedIn, Threads, Bluesky, YouTube Shorts, Pinterest, Google Business, Mastodon and X.
               </p>
               <a 
-                href="https://buffer.com/publish"
+                href="https://x-ion.com/publish"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-pink-700 hover:text-pink-900 group"
               >
                 <span>Learn more</span>
@@ -86,12 +86,12 @@ export function CoreFeaturesSection() {
                 Create
               </span>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://buffer.com/create" className="hover:underline">
+                <a href="https://x-ion.com/create" className="hover:underline">
                   Turn any idea into the perfect post
                 </a>
               </h3>
 
-              {/* Interactive preview illustration of Buffer Create Ideas */}
+              {/* Interactive preview illustration of X-ion Create Ideas */}
               <div className="mt-8 rounded-2xl bg-white border border-emerald-100 shadow-sm p-4 sm:p-5 space-y-3.5 select-none">
                 <div className="flex items-center justify-between pb-3 border-b border-gray-100 text-xs">
                   <div className="flex items-center gap-1.5 bg-gray-100 p-1 rounded-lg">
@@ -131,10 +131,10 @@ export function CoreFeaturesSection() {
 
             <div className="mt-8 pt-6 border-t border-emerald-200/60">
               <p className="text-sm text-gray-700 leading-relaxed">
-                Whether you’re flying solo or working with a team, Buffer has all the features to help you create, organize, and repurpose your content for any channel. There’s also an AI Assistant if you need it.
+                Whether you’re flying solo or working with a team, X-ion has all the features to help you create, organize, and repurpose your content for any channel. There’s also an AI Assistant if you need it.
               </p>
               <a 
-                href="https://buffer.com/create"
+                href="https://x-ion.com/create"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-emerald-700 hover:text-emerald-900 group"
               >
                 <span>Learn more</span>
@@ -150,7 +150,7 @@ export function CoreFeaturesSection() {
                 Community
               </span>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://buffer.com/community" className="hover:underline">
+                <a href="https://x-ion.com/community" className="hover:underline">
                   Reply to comments in a flash
                 </a>
               </h3>
@@ -189,10 +189,10 @@ export function CoreFeaturesSection() {
 
             <div className="mt-8 pt-6 border-t border-amber-200/60">
               <p className="text-sm text-gray-700 leading-relaxed">
-                Engage with your audience across all your channels at 10x speed. Buffer will help you triage and respond to comments from one simple dashboard.
+                Engage with your audience across all your channels at 10x speed. X-ion will help you triage and respond to comments from one simple dashboard.
               </p>
               <a 
-                href="https://buffer.com/community"
+                href="https://x-ion.com/community"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-amber-800 hover:text-amber-950 group"
               >
                 <span>Learn more</span>
@@ -213,7 +213,7 @@ export function CoreFeaturesSection() {
                 </span>
               </div>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://buffer.com/insights" className="hover:underline">
+                <a href="https://x-ion.com/insights" className="hover:underline">
                   Answers, not just analytics
                 </a>
               </h3>
@@ -250,10 +250,10 @@ export function CoreFeaturesSection() {
 
             <div className="mt-8 pt-6 border-t border-blue-200/60">
               <p className="text-sm text-gray-700 leading-relaxed">
-                Whether it’s basic analytics or in-depth reporting, Buffer will help you learn what works and how to improve.
+                Whether it’s basic analytics or in-depth reporting, X-ion will help you learn what works and how to improve.
               </p>
               <a 
-                href="https://buffer.com/insights"
+                href="https://x-ion.com/insights"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue-700 hover:text-blue-900 group"
               >
                 <span>Learn more</span>

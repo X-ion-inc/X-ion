@@ -1,6 +1,6 @@
 {
-  "name": "X-ION Campaign Intelligence",
-  "description": "Campaign Intelligence Infrastructure: data pipelines, analytics engines, and real-time execution tools for data-driven campaign strategy.",
+  "name": "X-ion: Social media management for everyone",
+  "description": "Use X-ion to manage your social media so that you can create and share your content everywhere, consistently.",
   "permissions": [],
   "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

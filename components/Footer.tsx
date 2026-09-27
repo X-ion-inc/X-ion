@@ -30,12 +30,12 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Features</h4>
             <ul className="space-y-2">
-              <li><a href="https://buffer.com/api" className="hover:text-[#2c4bff] transition-colors">Buffer API</a></li>
-              <li><a href="https://buffer.com/collaborate" className="hover:text-[#2c4bff] transition-colors">Collaborate</a></li>
-              <li><a href="https://buffer.com/community" className="hover:text-[#2c4bff] transition-colors">Community</a></li>
-              <li><a href="https://buffer.com/create" className="hover:text-[#2c4bff] transition-colors">Create</a></li>
-              <li><a href="https://buffer.com/insights" className="hover:text-[#2c4bff] transition-colors">Insights</a></li>
-              <li><a href="https://buffer.com/publish" className="hover:text-[#2c4bff] transition-colors">Publish</a></li>
+              <li><a href="https://x-ion.com/api" className="hover:text-[#2c4bff] transition-colors">X-ion API</a></li>
+              <li><a href="https://x-ion.com/collaborate" className="hover:text-[#2c4bff] transition-colors">Collaborate</a></li>
+              <li><a href="https://x-ion.com/community" className="hover:text-[#2c4bff] transition-colors">Community</a></li>
+              <li><a href="https://x-ion.com/create" className="hover:text-[#2c4bff] transition-colors">Create</a></li>
+              <li><a href="https://x-ion.com/insights" className="hover:text-[#2c4bff] transition-colors">Insights</a></li>
+              <li><a href="https://x-ion.com/publish" className="hover:text-[#2c4bff] transition-colors">Publish</a></li>
             </ul>
           </div>
 
@@ -43,13 +43,13 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Tools</h4>
             <ul className="space-y-2">
-              <li><a href="https://buffer.com/ai-assistant" className="hover:text-[#2c4bff] transition-colors">AI Assistant</a></li>
+              <li><a href="https://x-ion.com/ai-assistant" className="hover:text-[#2c4bff] transition-colors">AI Assistant</a></li>
               <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Android App</a></li>
               <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Browser Extension</a></li>
               <li><a href="#channels" className="hover:text-[#2c4bff] transition-colors">Integrations</a></li>
               <li><a href="#" className="hover:text-[#2c4bff] transition-colors">iOS App</a></li>
-              <li><a href="https://buffer.com/mcp" className="hover:text-[#2c4bff] transition-colors">Social Media MCP</a></li>
-              <li><a href="https://buffer.com/start-page" className="hover:text-[#2c4bff] transition-colors">Start Page</a></li>
+              <li><a href="https://x-ion.com/mcp" className="hover:text-[#2c4bff] transition-colors">Social Media MCP</a></li>
+              <li><a href="https://x-ion.com/start-page" className="hover:text-[#2c4bff] transition-colors">Start Page</a></li>
               <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Template Library</a></li>
             </ul>
           </div>
@@ -58,23 +58,23 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Channels</h4>
             <ul className="space-y-2">
-              <li><a href="https://buffer.com/bluesky" className="hover:text-[#2c4bff] transition-colors">Bluesky</a></li>
-              <li><a href="https://buffer.com/facebook" className="hover:text-[#2c4bff] transition-colors">Facebook</a></li>
-              <li><a href="https://buffer.com/google-business-profile" className="hover:text-[#2c4bff] transition-colors">Google Business</a></li>
-              <li><a href="https://buffer.com/instagram" className="hover:text-[#2c4bff] transition-colors">Instagram</a></li>
-              <li><a href="https://buffer.com/linkedin" className="hover:text-[#2c4bff] transition-colors">LinkedIn</a></li>
-              <li><a href="https://buffer.com/mastodon" className="hover:text-[#2c4bff] transition-colors">Mastodon</a></li>
-              <li><a href="https://buffer.com/pinterest" className="hover:text-[#2c4bff] transition-colors">Pinterest</a></li>
+              <li><a href="https://x-ion.com/bluesky" className="hover:text-[#2c4bff] transition-colors">Bluesky</a></li>
+              <li><a href="https://x-ion.com/facebook" className="hover:text-[#2c4bff] transition-colors">Facebook</a></li>
+              <li><a href="https://x-ion.com/google-business-profile" className="hover:text-[#2c4bff] transition-colors">Google Business</a></li>
+              <li><a href="https://x-ion.com/instagram" className="hover:text-[#2c4bff] transition-colors">Instagram</a></li>
+              <li><a href="https://x-ion.com/linkedin" className="hover:text-[#2c4bff] transition-colors">LinkedIn</a></li>
+              <li><a href="https://x-ion.com/mastodon" className="hover:text-[#2c4bff] transition-colors">Mastodon</a></li>
+              <li><a href="https://x-ion.com/pinterest" className="hover:text-[#2c4bff] transition-colors">Pinterest</a></li>
               <li>
-                <a href="https://buffer.com/substack" className="hover:text-[#2c4bff] transition-colors inline-flex items-center gap-1.5">
+                <a href="https://x-ion.com/substack" className="hover:text-[#2c4bff] transition-colors inline-flex items-center gap-1.5">
                   <span>Substack</span>
                   <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.2 bg-emerald-100 text-emerald-800 rounded">New</span>
                 </a>
               </li>
-              <li><a href="https://buffer.com/threads" className="hover:text-[#2c4bff] transition-colors">Threads</a></li>
-              <li><a href="https://buffer.com/tiktok" className="hover:text-[#2c4bff] transition-colors">TikTok</a></li>
-              <li><a href="https://buffer.com/x" className="hover:text-[#2c4bff] transition-colors">X</a></li>
-              <li><a href="https://buffer.com/youtube" className="hover:text-[#2c4bff] transition-colors">YouTube</a></li>
+              <li><a href="https://x-ion.com/threads" className="hover:text-[#2c4bff] transition-colors">Threads</a></li>
+              <li><a href="https://x-ion.com/tiktok" className="hover:text-[#2c4bff] transition-colors">TikTok</a></li>
+              <li><a href="https://x-ion.com/x" className="hover:text-[#2c4bff] transition-colors">X</a></li>
+              <li><a href="https://x-ion.com/youtube" className="hover:text-[#2c4bff] transition-colors">YouTube</a></li>
             </ul>
           </div>
 
@@ -96,10 +96,10 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Resources</h4>
             <ul className="space-y-2">
-              <li><a href="https://buffer.com/resources/" className="hover:text-[#2c4bff] transition-colors">Blog</a></li>
+              <li><a href="https://x-ion.com/resources/" className="hover:text-[#2c4bff] transition-colors">Blog</a></li>
               <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Our Community</a></li>
               <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Resource Library</a></li>
-              <li><a href="https://buffer.com/social-media-terms" className="hover:text-[#2c4bff] transition-colors">Social Media Terms Glossary</a></li>
+              <li><a href="https://x-ion.com/social-media-terms" className="hover:text-[#2c4bff] transition-colors">Social Media Terms Glossary</a></li>
             </ul>
           </div>
 
@@ -191,16 +191,16 @@ export function Footer() {
               </div>
 
               <div className="space-y-2.5">
-                <h4 className="font-bold text-gray-900 uppercase font-mono text-[11px]">Compare Buffer</h4>
+                <h4 className="font-bold text-gray-900 uppercase font-mono text-[11px]">Compare X-ion</h4>
                 <ul className="space-y-1.5 text-gray-600">
-                  <li><a href="#" className="hover:text-[#2c4bff]">Agorapulse vs Buffer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">eClincher vs Buffer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Hootsuite vs Buffer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Later vs Buffer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Loomly vs Buffer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Meta Business Suite vs Buffer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Metricool vs Buffer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Sprout Social vs Buffer</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">Agorapulse vs X-ion</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">eClincher vs X-ion</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">Hootsuite vs X-ion</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">Later vs X-ion</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">Loomly vs X-ion</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">Meta Business Suite vs X-ion</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">Metricool vs X-ion</a></li>
+                  <li><a href="#" className="hover:text-[#2c4bff]">Sprout Social vs X-ion</a></li>
                 </ul>
               </div>
             </div>
@@ -248,35 +248,35 @@ export function Footer() {
 
           {/* Social Icons */}
           <div className="flex items-center gap-4 text-gray-400">
-            <a href="https://www.instagram.com/buffer" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
               <InstagramIcon size={20} />
             </a>
-            <a href="https://www.facebook.com/bufferapp" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
               <FacebookIcon size={20} />
             </a>
-            <a href="https://bsky.app/profile/buffer.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://bsky.app" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
               <BlueskyIcon size={20} />
             </a>
-            <a href="https://x.com/buffer" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
               <XTwitterIcon size={20} />
             </a>
-            <a href="https://www.linkedin.com/company/bufferapp" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
               <LinkedInIcon size={20} />
             </a>
-            <a href="https://www.threads.net/@buffer" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+            <a href="https://www.threads.net" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
               <ThreadsIcon size={20} />
             </a>
           </div>
 
           {/* Policies & Copyright */}
           <div className="flex items-center gap-3 text-xs">
-            <span>Copyright © 2026 Buffer</span>
+            <span>Copyright © 2026 X-ion Inc.</span>
             <span>|</span>
-            <a href="https://buffer.com/legal#privacy-policy" className="hover:underline">Privacy</a>
+            <a href="https://x-ion.com/legal#privacy-policy" className="hover:underline">Privacy</a>
             <span>|</span>
-            <a href="https://buffer.com/legal#terms" className="hover:underline">Terms</a>
+            <a href="https://x-ion.com/legal#terms" className="hover:underline">Terms</a>
             <span>|</span>
-            <a href="https://buffer.com/legal#security" className="hover:underline">Security</a>
+            <a href="https://x-ion.com/legal#security" className="hover:underline">Security</a>
           </div>
         </div>
 

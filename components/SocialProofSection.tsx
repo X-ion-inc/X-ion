@@ -8,7 +8,7 @@ export function SocialProofSection() {
     <section className="py-12 bg-white border-y border-gray-100 overflow-hidden" aria-label="Social proof">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-          <span className="font-extrabold text-[#2c4bff]">273,098</span> creators, brands, and agencies using Buffer
+          <span aria-hidden="true">273,098</span><span className="visually-hidden">273,098</span> creators, brands, and agencies using X-ion
         </h2>
       </div>
 

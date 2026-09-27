@@ -152,7 +152,7 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
                     </div>
                     <div>
                       <div className="font-semibold text-sm text-gray-900">API &amp; MCP</div>
-                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Connect Buffer to your agents or custom apps</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Connect X-ion to your agents or custom apps</div>
                     </div>
                   </a>
                 </div>
@@ -292,8 +292,8 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
                     { title: 'Templates', desc: 'Plug-and-play content templates to jump-start your planning' },
                     { title: 'Free Tools', desc: 'Easy-to-use tools to grow your presence across social media' },
                     { title: 'Our Community', desc: 'Learn, connect, and grow with creators around the world' },
-                    { title: 'Support', desc: 'Help articles and tutorials to get the most out of Buffer' },
-                    { title: 'Case Studies', desc: 'How power users get more from Buffer.' },
+                    { title: 'Support', desc: 'Help articles and tutorials to get the most out of X-ion' },
+                    { title: 'Case Studies', desc: 'How power users get more from X-ion.' },
                   ].map((item, i) => (
                     <a
                       key={i}
@@ -319,37 +319,35 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
           </div>
         </div>
 
-        {/* Trailing CTAs */}
-        <div className="hidden sm:flex items-center gap-3">
-          <button
-            onClick={() => onOpenAuth('login')}
-            className="px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-50 rounded-xl transition-colors"
-          >
-            Log in
-          </button>
+        {/* Trailing CTAs: Exact Buffer Header Style with Light Green Pill Button */}
+        <div className="flex items-center gap-3">
           <button
             onClick={() => onOpenAuth('signup')}
-            className="px-5 py-2.5 text-sm font-semibold text-white bg-[#2c4bff] hover:bg-[#1b3aff] rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1.5"
+            className="px-5 py-2.5 text-sm font-semibold text-gray-950 bg-[#bbf7d0] hover:bg-[#86efac] rounded-full shadow-xs transition-all"
           >
-            <span>Get started for free</span>
+            Get started for free
           </button>
-        </div>
-
-        {/* Mobile menu trigger */}
-        <div className="flex lg:hidden items-center gap-2">
+          
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-gray-700 hover:text-gray-950 rounded-lg hover:bg-gray-100"
+            className="p-2 text-gray-700 hover:text-gray-950 rounded-xl hover:bg-gray-100 lg:hidden"
             aria-label="Toggle navigation menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+
+          <button
+            onClick={() => onOpenAuth('login')}
+            className="hidden lg:block px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-950 rounded-xl"
+          >
+            Log in
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3 max-h-[85vh] overflow-y-auto">
+        <div className="lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3 max-h-[85vh] overflow-y-auto shadow-xl">
           <div className="space-y-1">
             <a href="#publish" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Publish</a>
             <a href="#create" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Create</a>
@@ -369,15 +367,6 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
               className="w-full py-2.5 text-center text-sm font-semibold text-gray-800 bg-gray-100 rounded-xl"
             >
               Log in
-            </button>
-            <button
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                onOpenAuth('signup');
-              }}
-              className="w-full py-2.5 text-center text-sm font-semibold text-white bg-[#2c4bff] rounded-xl shadow-sm"
-            >
-              Get started for free
             </button>
           </div>
         </div>
