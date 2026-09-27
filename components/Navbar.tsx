@@ -21,11 +21,7 @@ import {
   Code
 } from 'lucide-react';
 
-interface NavbarProps {
-  onOpenAuth: (type: 'signup' | 'login') => void;
-}
-
-export function Navbar({ onOpenAuth }: NavbarProps) {
+export function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -321,12 +317,14 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
 
         {/* Trailing CTAs: Exact Buffer Header Style with Light Green Pill Button */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => onOpenAuth('signup')}
-            className="px-5 py-2.5 text-sm font-semibold text-gray-950 bg-[#bbf7d0] hover:bg-[#86efac] rounded-full shadow-xs transition-all"
+          <a
+            href="https://app.scrutium.com/register"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 text-sm font-semibold text-gray-950 bg-[#bbf7d0] hover:bg-[#86efac] rounded-full shadow-xs transition-all inline-block text-center"
           >
             Get started for free
-          </button>
+          </a>
           
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -336,12 +334,14 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-          <button
-            onClick={() => onOpenAuth('login')}
+          <a
+            href="https://app.scrutium.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden lg:block px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-950 rounded-xl"
           >
             Log in
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -359,15 +359,15 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
           </div>
 
           <div className="pt-4 border-t border-gray-100 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                onOpenAuth('login');
-              }}
-              className="w-full py-2.5 text-center text-sm font-semibold text-gray-800 bg-gray-100 rounded-xl"
+            <a
+              href="https://app.scrutium.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full py-2.5 text-center text-sm font-semibold text-gray-800 bg-gray-100 rounded-xl block"
             >
               Log in
-            </button>
+            </a>
           </div>
         </div>
       )}

@@ -1,0 +1,6 @@
+<svg width="120" height="36" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="36" height="36" rx="10" fill="#2C4BFF"/>
+  <text x="10" y="24" fill="white" font-family="system-ui, sans-serif" font-weight="bold" font-size="20">X</text>
+  <text x="46" y="24" fill="#0F172A" font-family="system-ui, sans-serif" font-weight="extrabold" font-size="20">X-ion</text>
+  <circle cx="98" cy="22" r="3.5" fill="#2C4BFF"/>
+</svg>

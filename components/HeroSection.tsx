@@ -6,28 +6,23 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { getChannelIcon } from './icons/ChannelLogos';
 import { getToolIcon } from './icons/IntegrationLogos';
 
-interface HeroSectionProps {
-  onStartWithEmail: (email: string) => void;
-}
-
-export function HeroSection({ onStartWithEmail }: HeroSectionProps) {
+export function HeroSection() {
   const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-    onStartWithEmail(email);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    const url = email 
+      ? `https://app.scrutium.com/register?email=${encodeURIComponent(email)}`
+      : 'https://app.scrutium.com/register';
+    window.open(url, '_blank');
   };
 
   return (
     <section className="relative overflow-hidden bg-gray-950 pt-16 pb-28 md:pt-24 md:pb-40 text-white">
-      {/* Background Image: Alexander Shatov 3D Social Icons Render */}
+      {/* Background Image: Local asset in public/images/hero-bg.jpg */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <Image
-          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-bg.jpg"
           alt="3D Social Media Icons Background"
           fill
           priority
@@ -94,7 +89,7 @@ export function HeroSection({ onStartWithEmail }: HeroSectionProps) {
           Works with every platform you post to, and plugs into your favorite tools
         </p>
 
-        {/* Email Signup Form */}
+        {/* Email Signup Form opening app.scrutium.com/register */}
         <div className="mt-8 sm:mt-10 max-w-md mx-auto space-y-3.5">
           <form onSubmit={handleSubmit} className="space-y-3">
             <label htmlFor="email-input" className="sr-only">Enter your email</label>
@@ -109,23 +104,16 @@ export function HeroSection({ onStartWithEmail }: HeroSectionProps) {
             />
             <button
               type="submit"
-              className="w-full h-14 px-7 rounded-full bg-[#bbf7d0] hover:bg-[#86efac] text-gray-950 font-bold text-base transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full h-14 px-7 rounded-full bg-[#bbf7d0] hover:bg-[#86efac] text-gray-950 font-bold text-base transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer"
             >
               <span>Get started for free</span>
               <ArrowRight className="w-5 h-5 text-gray-950" />
             </button>
           </form>
 
-          {submitted ? (
-            <p className="text-xs text-emerald-300 font-medium flex items-center justify-center gap-1">
-              <CheckCircle2 className="w-4 h-4" />
-              <span>Welcome! Setting up your X-ion workspace...</span>
-            </p>
-          ) : (
-            <p className="text-xs text-gray-300">
-              By entering your email, you agree to receive emails from X-ion.
-            </p>
-          )}
+          <p className="text-xs text-gray-300">
+            By entering your email, you agree to receive emails from X-ion.
+          </p>
         </div>
       </div>
     </section>
