@@ -1,189 +1,387 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { BufferLogo } from './icons/BufferLogo';
+import { CHANNELS, INTEGRATION_TOOLS } from '@/lib/bufferData';
+import { getChannelIcon } from './icons/ChannelLogos';
+import { getToolIcon } from './icons/IntegrationLogos';
 import { 
-  Zap, 
-  Database, 
-  BarChart3, 
-  Cpu, 
-  Sliders, 
-  Activity, 
-  Download, 
-  ShieldAlert, 
-  RefreshCw 
+  ChevronDown, 
+  ChevronUp, 
+  Menu, 
+  X, 
+  ArrowRight,
+  PenTool,
+  Send,
+  BarChart2,
+  MessageSquare,
+  Users,
+  Layout,
+  Sparkles,
+  Code
 } from 'lucide-react';
 
 interface NavbarProps {
-  activeTab: 'overview' | 'pipelines' | 'analytics' | 'execution' | 'simulator';
-  setActiveTab: (tab: 'overview' | 'pipelines' | 'analytics' | 'execution' | 'simulator') => void;
-  isSimulating: boolean;
-  setIsSimulating: React.Dispatch<React.SetStateAction<boolean>>;
-  onBurstIngest: () => void;
-  onExport: () => void;
-  onEmergencyKillswitch: () => void;
-  eventsPerSec: number;
+  onOpenAuth: (type: 'signup' | 'login') => void;
 }
 
-export function Navbar({
-  activeTab,
-  setActiveTab,
-  isSimulating,
-  setIsSimulating,
-  onBurstIngest,
-  onExport,
-  onEmergencyKillswitch,
-  eventsPerSec,
-}: NavbarProps) {
+export function Navbar({ onOpenAuth }: NavbarProps) {
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const toggleDropdown = (name: string) => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
+
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/90 backdrop-blur-md">
-      {/* Top micro-bar */}
-      <div className="border-b border-slate-800/80 px-4 py-1.5 text-xs flex flex-wrap items-center justify-between text-slate-400">
-        <div className="flex items-center gap-3">
-          <span className="flex items-center gap-1.5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span className="font-mono text-emerald-400 font-semibold tracking-wider">PIPELINE CDC LIVE</span>
-          </span>
-          <span className="text-slate-600">|</span>
-          <span className="font-mono text-slate-300">
-            INGESTION: <strong className="text-cyan-400 font-semibold">{eventsPerSec.toLocaleString()}</strong> events/s
-          </span>
-          <span className="text-slate-600">|</span>
-          <span className="text-slate-400 font-mono">LATENCY P99: <strong className="text-slate-200">22ms</strong></span>
-          <span className="text-slate-600">|</span>
-          <span className="text-slate-400 font-mono">CLUSTER: <span className="text-indigo-300">eu-west2-edge</span></span>
-        </div>
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 text-gray-900 transition-all">
+      <nav ref={navRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        {/* Leading: Logo */}
+        <div className="flex items-center gap-8">
+          <a href="#" className="flex items-center text-gray-950 hover:opacity-90 transition-opacity">
+            <BufferLogo width={120} height={32} />
+          </a>
 
-        <div className="flex items-center gap-2 mt-1 sm:mt-0">
-          <button
-            onClick={() => setIsSimulating(!isSimulating)}
-            className={`px-2 py-0.5 rounded text-[11px] font-mono transition-colors flex items-center gap-1 border ${
-              isSimulating 
-                ? 'bg-emerald-950/60 border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/60'
-                : 'bg-amber-950/60 border-amber-500/40 text-amber-300 hover:bg-amber-900/60'
-            }`}
-          >
-            <Activity className="h-3 w-3" />
-            {isSimulating ? 'STREAM ACTIVE' : 'STREAM PAUSED'}
-          </button>
+          {/* Middle: Desktop Navigation Items */}
+          <div className="hidden lg:flex items-center space-x-1">
+            {/* Features Menu */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('features')}
+                className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  openDropdown === 'features' ? 'text-[#2c4bff] bg-blue-50/60' : 'text-gray-700 hover:text-gray-950 hover:bg-gray-50'
+                }`}
+              >
+                <span>Features</span>
+                {openDropdown === 'features' ? (
+                  <ChevronUp className="w-4 h-4 text-[#2c4bff]" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-gray-400" />
+                )}
+              </button>
 
-          <button
-            onClick={onBurstIngest}
-            className="px-2 py-0.5 rounded text-[11px] font-mono transition-colors bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-900/50 flex items-center gap-1"
-            title="Inject 50,000 synthetic conversion events into pipelines"
-          >
-            <RefreshCw className="h-3 w-3" />
-            +50k Ingest Burst
-          </button>
+              {openDropdown === 'features' && (
+                <div className="absolute top-full left-0 mt-2 w-[540px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 grid grid-cols-2 gap-2 animate-in fade-in zoom-in-95 duration-150">
+                  <a href="#publish" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-pink-50 text-pink-600 group-hover:scale-105 transition-transform">
+                      <Send className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900">Publish</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Plan and schedule your content across social media platforms</div>
+                    </div>
+                  </a>
 
-          <button
-            onClick={onEmergencyKillswitch}
-            className="px-2 py-0.5 rounded text-[11px] font-mono transition-colors bg-rose-950/50 border border-rose-500/40 text-rose-300 hover:bg-rose-900/50 flex items-center gap-1"
-            title="Emergency budget guardrail killswitch"
-          >
-            <ShieldAlert className="h-3 w-3" />
-            Stop-Loss Guard
-          </button>
+                  <a href="#create" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600 group-hover:scale-105 transition-transform">
+                      <PenTool className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900">Create</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Build your own library of content ideas</div>
+                    </div>
+                  </a>
 
-          <button
-            onClick={onExport}
-            className="px-2 py-0.5 rounded text-[11px] font-mono transition-colors bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 flex items-center gap-1"
-          >
-            <Download className="h-3 w-3" />
-            Export Intel
-          </button>
-        </div>
-      </div>
+                  <a href="#insights" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-blue-50 text-blue-600 group-hover:scale-105 transition-transform">
+                      <BarChart2 className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900 flex items-center gap-1.5">
+                        <span>Insights</span>
+                        <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.2 bg-emerald-100 text-emerald-800 rounded">New</span>
+                      </div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Understand your performance and what to post next</div>
+                    </div>
+                  </a>
 
-      {/* Main header navbar */}
-      <div className="px-4 py-3 flex flex-wrap items-center justify-between gap-4">
-        {/* Brand identity */}
-        <div className="flex items-center gap-3">
-          <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-cyan-500 via-indigo-500 to-purple-600 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center">
-            <div className="h-full w-full bg-slate-950 rounded-[7px] flex items-center justify-center">
-              <Zap className="h-5 w-5 text-cyan-400 fill-cyan-400/20" />
+                  <a href="#community" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-amber-50 text-amber-600 group-hover:scale-105 transition-transform">
+                      <MessageSquare className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900">Community</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Easily engage with your community in a flash</div>
+                    </div>
+                  </a>
+
+                  <a href="#collaborate" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-rose-50 text-rose-600 group-hover:scale-105 transition-transform">
+                      <Users className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900">Collaborate</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Work together seamlessly, from planning to publishing</div>
+                    </div>
+                  </a>
+
+                  <a href="#start-page" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-orange-50 text-orange-600 group-hover:scale-105 transition-transform">
+                      <Layout className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900">Start Page</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Build a custom link-in-bio page in minutes</div>
+                    </div>
+                  </a>
+
+                  <a href="#ai-assistant" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-cyan-50 text-cyan-600 group-hover:scale-105 transition-transform">
+                      <Sparkles className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900">AI Assistant</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Get help creating, refining, and repurposing content</div>
+                    </div>
+                  </a>
+
+                  <a href="#api" onClick={() => setOpenDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group">
+                    <div className="p-2 rounded-lg bg-purple-50 text-purple-600 group-hover:scale-105 transition-transform">
+                      <Code className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900">API &amp; MCP</div>
+                      <div className="text-xs text-gray-500 mt-0.5 leading-snug">Connect Buffer to your agents or custom apps</div>
+                    </div>
+                  </a>
+                </div>
+              )}
             </div>
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-black tracking-tight text-white font-mono">
-                X-ION<span className="text-cyan-400">.</span>
-              </span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800/60 font-mono">
-                CORE v2.4
-              </span>
+
+            {/* Integrations Menu */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('integrations')}
+                className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  openDropdown === 'integrations' ? 'text-[#2c4bff] bg-blue-50/60' : 'text-gray-700 hover:text-gray-950 hover:bg-gray-50'
+                }`}
+              >
+                <span>Integrations</span>
+                {openDropdown === 'integrations' ? (
+                  <ChevronUp className="w-4 h-4 text-[#2c4bff]" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-gray-400" />
+                )}
+              </button>
+
+              {openDropdown === 'integrations' && (
+                <div className="absolute top-full -left-20 mt-2 w-[620px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 flex gap-6 animate-in fade-in zoom-in-95 duration-150">
+                  {/* Channels Col */}
+                  <div className="flex-1">
+                    <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Channels</h3>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      {CHANNELS.map((ch) => (
+                        <a
+                          key={ch.id}
+                          href="#channels"
+                          onClick={() => setOpenDropdown(null)}
+                          className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-gray-50 text-gray-800 text-xs font-medium transition-colors"
+                        >
+                          <span className="shrink-0">{getChannelIcon(ch.id, 'w-4 h-4', 16)}</span>
+                          <span className="truncate">{ch.name}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="w-px bg-gray-100 my-1" />
+
+                  {/* Tools Col */}
+                  <div className="w-56 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Tools</h3>
+                      <div className="space-y-1">
+                        {INTEGRATION_TOOLS.slice(0, 6).map((tool) => (
+                          <a
+                            key={tool.id}
+                            href="#tools"
+                            onClick={() => setOpenDropdown(null)}
+                            className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-gray-50 text-gray-800 text-xs font-medium transition-colors"
+                          >
+                            <span className="shrink-0">{getToolIcon(tool.id, 'w-4 h-4', 16)}</span>
+                            <span>{tool.name}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+
+                    <a 
+                      href="#channels" 
+                      onClick={() => setOpenDropdown(null)}
+                      className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-[#2c4bff] hover:underline"
+                    >
+                      <span>See all integrations</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
-            <p className="text-[11px] text-slate-400 hidden sm:block">
-              Campaign Intelligence Infrastructure &amp; Real-time Execution
-            </p>
+
+            {/* Made for Menu */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('madeFor')}
+                className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  openDropdown === 'madeFor' ? 'text-[#2c4bff] bg-blue-50/60' : 'text-gray-700 hover:text-gray-950 hover:bg-gray-50'
+                }`}
+              >
+                <span>Made for</span>
+                {openDropdown === 'madeFor' ? (
+                  <ChevronUp className="w-4 h-4 text-[#2c4bff]" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-gray-400" />
+                )}
+              </button>
+
+              {openDropdown === 'madeFor' && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 p-3 space-y-1 animate-in fade-in zoom-in-95 duration-150">
+                  {[
+                    { title: 'Creators', desc: 'Grow your community with confidence, not complexity' },
+                    { title: 'Small Business', desc: 'A simpler way to manage your small business’ social media' },
+                    { title: 'Agencies', desc: 'Run every client’s social with clarity' },
+                    { title: 'Nonprofits', desc: 'Made for small teams doing big things' },
+                    { title: 'Higher Education', desc: 'Social media management built for schools and universities' },
+                    { title: 'Developers', desc: 'Add a social layer for whatever you’re building' },
+                  ].map((item, i) => (
+                    <a
+                      key={i}
+                      href="#made-for"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block p-2.5 rounded-xl hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="font-semibold text-sm text-gray-900">{item.title}</div>
+                      <div className="text-xs text-gray-500 mt-0.5">{item.desc}</div>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Resources Menu */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('resources')}
+                className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  openDropdown === 'resources' ? 'text-[#2c4bff] bg-blue-50/60' : 'text-gray-700 hover:text-gray-950 hover:bg-gray-50'
+                }`}
+              >
+                <span>Resources</span>
+                {openDropdown === 'resources' ? (
+                  <ChevronUp className="w-4 h-4 text-[#2c4bff]" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-gray-400" />
+                )}
+              </button>
+
+              {openDropdown === 'resources' && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 p-3 space-y-1 animate-in fade-in zoom-in-95 duration-150">
+                  {[
+                    { title: 'Blog', desc: 'Real-life stories and resources on growing an engaged audience' },
+                    { title: 'Templates', desc: 'Plug-and-play content templates to jump-start your planning' },
+                    { title: 'Free Tools', desc: 'Easy-to-use tools to grow your presence across social media' },
+                    { title: 'Our Community', desc: 'Learn, connect, and grow with creators around the world' },
+                    { title: 'Support', desc: 'Help articles and tutorials to get the most out of Buffer' },
+                    { title: 'Case Studies', desc: 'How power users get more from Buffer.' },
+                  ].map((item, i) => (
+                    <a
+                      key={i}
+                      href="#resources"
+                      onClick={() => setOpenDropdown(null)}
+                      className="block p-2.5 rounded-xl hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="font-semibold text-sm text-gray-900">{item.title}</div>
+                      <div className="text-xs text-gray-500 mt-0.5">{item.desc}</div>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Pricing link */}
+            <a
+              href="#pricing"
+              className="px-3.5 py-2 text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-50 rounded-lg transition-colors"
+            >
+              Pricing
+            </a>
           </div>
         </div>
 
-        {/* Tab navigation */}
-        <nav className="flex items-center gap-1 bg-slate-900/90 border border-slate-800 p-1 rounded-xl">
+        {/* Trailing CTAs */}
+        <div className="hidden sm:flex items-center gap-3">
           <button
-            onClick={() => setActiveTab('overview')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'overview'
-                ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
-            }`}
+            onClick={() => onOpenAuth('login')}
+            className="px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-50 rounded-xl transition-colors"
           >
-            <Activity className="h-3.5 w-3.5" />
-            Overview
+            Log in
           </button>
+          <button
+            onClick={() => onOpenAuth('signup')}
+            className="px-5 py-2.5 text-sm font-semibold text-white bg-[#2c4bff] hover:bg-[#1b3aff] rounded-xl shadow-sm hover:shadow transition-all flex items-center gap-1.5"
+          >
+            <span>Get started for free</span>
+          </button>
+        </div>
 
+        {/* Mobile menu trigger */}
+        <div className="flex lg:hidden items-center gap-2">
           <button
-            onClick={() => setActiveTab('pipelines')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'pipelines'
-                ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
-            }`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-gray-700 hover:text-gray-950 rounded-lg hover:bg-gray-100"
+            aria-label="Toggle navigation menu"
           >
-            <Database className="h-3.5 w-3.5" />
-            Data Pipelines
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+        </div>
+      </nav>
 
-          <button
-            onClick={() => setActiveTab('analytics')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'analytics'
-                ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
-            }`}
-          >
-            <BarChart3 className="h-3.5 w-3.5" />
-            Attribution Engine
-          </button>
+      {/* Mobile Menu Drawer */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3 max-h-[85vh] overflow-y-auto">
+          <div className="space-y-1">
+            <a href="#publish" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Publish</a>
+            <a href="#create" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Create</a>
+            <a href="#insights" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Insights</a>
+            <a href="#community" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Community</a>
+            <a href="#channels" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Channels &amp; Integrations</a>
+            <a href="#resources" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Resources</a>
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">About Transparency</a>
+          </div>
 
-          <button
-            onClick={() => setActiveTab('execution')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'execution'
-                ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
-            }`}
-          >
-            <Cpu className="h-3.5 w-3.5" />
-            Execution Rules
-          </button>
-
-          <button
-            onClick={() => setActiveTab('simulator')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'simulator'
-                ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
-            }`}
-          >
-            <Sliders className="h-3.5 w-3.5" />
-            Strategy Simulator
-          </button>
-        </nav>
-      </div>
+          <div className="pt-4 border-t border-gray-100 flex flex-col gap-2">
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                onOpenAuth('login');
+              }}
+              className="w-full py-2.5 text-center text-sm font-semibold text-gray-800 bg-gray-100 rounded-xl"
+            >
+              Log in
+            </button>
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                onOpenAuth('signup');
+              }}
+              className="w-full py-2.5 text-center text-sm font-semibold text-white bg-[#2c4bff] rounded-xl shadow-sm"
+            >
+              Get started for free
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
