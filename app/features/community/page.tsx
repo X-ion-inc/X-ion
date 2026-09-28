@@ -79,7 +79,7 @@ export default function CommunityFeaturePage() {
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://app.scrutium.com/register"
+            href="https://app.scrutium.com/signup"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-full bg-[#bbf7d0] hover:bg-[#86efac] text-gray-950 font-bold text-sm shadow-md hover:shadow-lg transition-all"

@@ -74,7 +74,7 @@ The app highlights X-ion as a full social media toolkit for creators, marketers,
 ├── postcss.config.mjs
 ├── tsconfig.json
 ├── wrangler.toml
-├── bun.lock
+├── package-lock.json
 ├── README.md
 └── ...
 ```

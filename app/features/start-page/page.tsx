@@ -59,7 +59,7 @@ export default function StartPageFeaturePage() {
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://app.scrutium.com/register"
+            href="https://app.scrutium.com/signup"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-full bg-[#bbf7d0] hover:bg-[#86efac] text-gray-950 font-bold text-sm shadow-md hover:shadow-lg transition-all"
@@ -137,7 +137,7 @@ export default function StartPageFeaturePage() {
           <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
             <span className="text-xs text-gray-500 font-medium">Free SSL certificate included</span>
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-bold text-[#2c4bff] hover:underline flex items-center gap-1"

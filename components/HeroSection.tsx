@@ -12,9 +12,9 @@ export function HeroSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const url = email 
-      ? `https://app.scrutium.com/register?email=${encodeURIComponent(email)}`
-      : 'https://app.scrutium.com/register';
-    window.open(url, '_blank');
+      ? `https://app.scrutium.com/signup?email=${encodeURIComponent(email)}`
+      : 'https://app.scrutium.com/signup';
+    window.location.href = url;
   };
 
   return (
@@ -89,7 +89,7 @@ export function HeroSection() {
           Works with every platform you post to, and plugs into your favorite tools
         </p>
 
-        {/* Email Signup Form opening app.scrutium.com/register */}
+        {/* Email Signup Form opening app.scrutium.com/signup */}
         <div className="mt-8 sm:mt-10 max-w-md mx-auto space-y-3.5">
           <form onSubmit={handleSubmit} className="space-y-3">
             <label htmlFor="email-input" className="sr-only">Enter your email</label>

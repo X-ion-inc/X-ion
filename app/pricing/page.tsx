@@ -146,7 +146,7 @@ export default function PricingPage() {
 
           <div className="mt-8 pt-6 border-t border-gray-100">
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3 px-4 rounded-xl border border-gray-300 hover:border-gray-950 text-gray-950 font-bold text-sm text-center block transition-colors"
@@ -195,7 +195,7 @@ export default function PricingPage() {
 
           <div className="mt-8 pt-6 border-t border-gray-100">
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3.5 px-4 rounded-xl bg-[#2c4bff] hover:bg-[#1b3aff] text-white font-bold text-sm text-center block shadow-md hover:shadow-lg transition-all"
@@ -240,7 +240,7 @@ export default function PricingPage() {
 
           <div className="mt-8 pt-6 border-t border-gray-100">
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3 px-4 rounded-xl border border-gray-300 hover:border-gray-950 text-gray-950 font-bold text-sm text-center block transition-colors"
@@ -285,7 +285,7 @@ export default function PricingPage() {
 
           <div className="mt-8 pt-6 border-t border-gray-100">
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3 px-4 rounded-xl border border-gray-300 hover:border-gray-950 text-gray-950 font-bold text-sm text-center block transition-colors"
@@ -410,7 +410,7 @@ export default function PricingPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-full bg-[#bbf7d0] hover:bg-[#86efac] text-gray-950 font-bold text-sm shadow-md transition-all"
@@ -418,7 +418,7 @@ export default function PricingPage() {
               Get started for free
             </a>
             <a
-              href="https://app.scrutium.com/login"
+              href="https://app.scrutium.com/signin"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3.5 rounded-full border border-white/30 hover:bg-white/10 text-white font-medium text-sm transition-all"

@@ -1,28 +1,49 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface LogoProps {
   className?: string;
   width?: number;
   height?: number;
+  showText?: boolean;
 }
 
-export function BufferLogo({ className = '', width = 120, height = 36 }: LogoProps) {
+export function BufferLogo({ className = '', width = 36, height = 36, showText = true }: LogoProps) {
   return (
-    <div className={`flex items-center gap-2 font-extrabold tracking-tight ${className}`}>
-      <div className="w-8 h-8 rounded-xl bg-[#2c4bff] text-white flex items-center justify-center font-mono text-lg shadow-sm">
-        X
+    <div className={`flex items-center gap-2.5 font-extrabold tracking-tight ${className}`}>
+      <div className="relative w-9 h-9 rounded-xl overflow-hidden shrink-0 flex items-center justify-center">
+        <Image
+          src="/logo/logo.png"
+          alt="X-ion Logo"
+          width={width || 36}
+          height={height || 36}
+          className="w-full h-full object-contain"
+          priority
+        />
       </div>
-      <span className="text-xl font-extrabold text-gray-950 font-sans tracking-tight">
-        X-ion<span className="text-[#2c4bff]">.</span>
-      </span>
+      {showText && (
+        <span className="text-xl font-extrabold text-gray-950 font-sans tracking-tight flex items-center">
+          X-ion<span className="text-[#2c4bff]">.</span>
+        </span>
+      )}
     </div>
   );
 }
 
-export function BufferIconMark({ className = '', size = 28 }: { className?: string; size?: number }) {
+export function BufferIconMark({ className = '', size = 32 }: { className?: string; size?: number }) {
   return (
-    <div className={`w-7 h-7 rounded-xl bg-[#2c4bff] text-white flex items-center justify-center font-mono text-sm font-bold shadow-sm ${className}`}>
-      X
+    <div
+      className={`relative rounded-xl overflow-hidden shrink-0 flex items-center justify-center ${className}`}
+      style={{ width: size, height: size }}
+    >
+      <Image
+        src="/logo/logo.png"
+        alt="X-ion Icon"
+        width={size}
+        height={size}
+        className="w-full h-full object-contain"
+        priority
+      />
     </div>
   );
 }

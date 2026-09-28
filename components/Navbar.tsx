@@ -333,7 +333,7 @@ export function Navbar() {
         {/* Trailing CTAs: Exact Brand Style with Light Green Pill Button */}
         <div className="flex items-center gap-3">
           <a
-            href="https://app.scrutium.com/register"
+            href="https://app.scrutium.com/signup"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 text-sm font-semibold text-gray-950 bg-[#bbf7d0] hover:bg-[#86efac] rounded-full shadow-xs transition-all inline-block text-center cursor-pointer"
@@ -350,7 +350,7 @@ export function Navbar() {
           </button>
 
           <a
-            href="https://app.scrutium.com/login"
+            href="https://app.scrutium.com/signin"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:block px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-950 rounded-xl"
@@ -378,7 +378,7 @@ export function Navbar() {
 
           <div className="pt-4 border-t border-gray-100 flex flex-col gap-2">
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -387,7 +387,7 @@ export function Navbar() {
               Get started for free
             </a>
             <a
-              href="https://app.scrutium.com/login"
+              href="https://app.scrutium.com/signin"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}

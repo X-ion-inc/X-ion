@@ -291,7 +291,7 @@ export default function IntegrationsPage() {
 
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
                   <a
-                    href="https://app.scrutium.com/register"
+                    href="https://app.scrutium.com/signup"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-bold text-[#2c4bff] hover:text-[#1b3aff] flex items-center gap-1.5"
@@ -339,7 +339,7 @@ export default function IntegrationsPage() {
             </div>
             <div className="mt-8">
               <a
-                href="https://app.scrutium.com/register"
+                href="https://app.scrutium.com/signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-[#bbf7d0] hover:bg-[#86efac] text-gray-950 font-bold text-sm inline-flex items-center gap-2 shadow-lg transition-all"

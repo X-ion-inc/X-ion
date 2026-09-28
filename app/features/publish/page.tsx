@@ -63,7 +63,7 @@ export default function PublishFeaturePage() {
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://app.scrutium.com/register"
+            href="https://app.scrutium.com/signup"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-full bg-[#bbf7d0] hover:bg-[#86efac] text-gray-950 font-bold text-sm shadow-md hover:shadow-lg transition-all"
@@ -239,7 +239,7 @@ export default function PublishFeaturePage() {
           </p>
           <div className="mt-8 flex justify-center">
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-full bg-[#2c4bff] hover:bg-[#1b3aff] text-white font-bold text-sm shadow-md transition-all inline-flex items-center gap-2"

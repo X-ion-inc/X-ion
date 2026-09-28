@@ -13,7 +13,7 @@ export function CTASection() {
 
         <div className="mt-8">
           <a
-            href="https://app.scrutium.com/register"
+            href="https://app.scrutium.com/signup"
             target="_blank"
             rel="noopener noreferrer"
             className="h-16 px-10 rounded-2xl bg-[#2c4bff] hover:bg-[#1b3aff] text-white text-lg font-bold transition-all shadow-md hover:shadow-lg inline-flex items-center gap-3 group"

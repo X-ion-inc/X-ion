@@ -302,7 +302,7 @@ export default function ResourcesPage() {
               </p>
             </div>
             <a
-              href="https://app.scrutium.com/register"
+              href="https://app.scrutium.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 text-xs font-bold text-[#2c4bff] hover:underline flex items-center gap-1"
