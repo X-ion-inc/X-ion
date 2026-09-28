@@ -74,11 +74,11 @@ export function HeroSection() {
       {/* Main Center Content */}
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center z-20">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight text-white leading-[1.12] drop-shadow-md">
-          Your social media workspace
+          The Operating System for Modern Campaigns
         </h1>
 
         <p className="mt-5 text-lg sm:text-xl text-gray-200 max-w-xl mx-auto leading-relaxed font-normal drop-shadow">
-          Works with every platform you post to, and plugs into your favorite tools
+          Coordinate Campaigns. Monitor Performance. Drive Results.
         </p>
 
         {/* Email Signup Form opening app.scrutium.com/signup */}
