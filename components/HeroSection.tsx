@@ -9,14 +9,6 @@ import { getToolIcon } from './icons/IntegrationLogos';
 export function HeroSection() {
   const [email, setEmail] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const url = email 
-      ? `https://app.scrutium.com/signup?email=${encodeURIComponent(email)}`
-      : 'https://app.scrutium.com/signup';
-    window.location.href = url;
-  };
-
   return (
     <section className="relative overflow-hidden bg-gray-950 pt-16 pb-28 md:pt-24 md:pb-40 text-white">
       {/* Background Image: Local asset in public/images/hero-bg.jpg */}
@@ -91,10 +83,17 @@ export function HeroSection() {
 
         {/* Email Signup Form opening app.scrutium.com/signup */}
         <div className="mt-8 sm:mt-10 max-w-md mx-auto space-y-3.5">
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form 
+            action="https://app.scrutium.com/signup" 
+            method="GET" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="space-y-3"
+          >
             <label htmlFor="email-input" className="sr-only">Enter your email</label>
             <input
               id="email-input"
+              name="email"
               type="email"
               required
               value={email}
