@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { BufferLogo } from './icons/BufferLogo';
 import { ChevronDown, ChevronUp, Globe } from 'lucide-react';
 import { 
@@ -30,12 +31,12 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Features</h4>
             <ul className="space-y-2">
-              <li><a href="https://x-ion.com/api" className="hover:text-[#2c4bff] transition-colors">X-ion API</a></li>
-              <li><a href="https://x-ion.com/collaborate" className="hover:text-[#2c4bff] transition-colors">Collaborate</a></li>
-              <li><a href="https://x-ion.com/community" className="hover:text-[#2c4bff] transition-colors">Community</a></li>
-              <li><a href="https://x-ion.com/create" className="hover:text-[#2c4bff] transition-colors">Create</a></li>
-              <li><a href="https://x-ion.com/insights" className="hover:text-[#2c4bff] transition-colors">Insights</a></li>
-              <li><a href="https://x-ion.com/publish" className="hover:text-[#2c4bff] transition-colors">Publish</a></li>
+              <li><Link href="/features/publish" className="hover:text-[#2c4bff] transition-colors">Publish</Link></li>
+              <li><Link href="/features/create" className="hover:text-[#2c4bff] transition-colors">Create</Link></li>
+              <li><Link href="/features/insights" className="hover:text-[#2c4bff] transition-colors">Insights</Link></li>
+              <li><Link href="/features/community" className="hover:text-[#2c4bff] transition-colors">Community</Link></li>
+              <li><Link href="/features/start-page" className="hover:text-[#2c4bff] transition-colors">Start Page</Link></li>
+              <li><Link href="/integrations" className="hover:text-[#2c4bff] transition-colors">X-ion API &amp; MCP</Link></li>
             </ul>
           </div>
 
@@ -43,14 +44,12 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Tools</h4>
             <ul className="space-y-2">
-              <li><a href="https://x-ion.com/ai-assistant" className="hover:text-[#2c4bff] transition-colors">AI Assistant</a></li>
-              <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Android App</a></li>
-              <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Browser Extension</a></li>
-              <li><a href="#channels" className="hover:text-[#2c4bff] transition-colors">Integrations</a></li>
-              <li><a href="#" className="hover:text-[#2c4bff] transition-colors">iOS App</a></li>
-              <li><a href="https://x-ion.com/mcp" className="hover:text-[#2c4bff] transition-colors">Social Media MCP</a></li>
-              <li><a href="https://x-ion.com/start-page" className="hover:text-[#2c4bff] transition-colors">Start Page</a></li>
-              <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Template Library</a></li>
+              <li><Link href="/features/create#ai" className="hover:text-[#2c4bff] transition-colors">AI Assistant</Link></li>
+              <li><Link href="/resources" className="hover:text-[#2c4bff] transition-colors">Free Marketing Tools</Link></li>
+              <li><Link href="/resources#counter" className="hover:text-[#2c4bff] transition-colors">Character Counter</Link></li>
+              <li><Link href="/integrations" className="hover:text-[#2c4bff] transition-colors">Integrations Hub</Link></li>
+              <li><Link href="/features/start-page" className="hover:text-[#2c4bff] transition-colors">Link in Bio Tool</Link></li>
+              <li><Link href="/resources#templates" className="hover:text-[#2c4bff] transition-colors">Template Library</Link></li>
             </ul>
           </div>
 
@@ -58,23 +57,15 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Channels</h4>
             <ul className="space-y-2">
-              <li><a href="https://x-ion.com/bluesky" className="hover:text-[#2c4bff] transition-colors">Bluesky</a></li>
-              <li><a href="https://x-ion.com/facebook" className="hover:text-[#2c4bff] transition-colors">Facebook</a></li>
-              <li><a href="https://x-ion.com/google-business-profile" className="hover:text-[#2c4bff] transition-colors">Google Business</a></li>
-              <li><a href="https://x-ion.com/instagram" className="hover:text-[#2c4bff] transition-colors">Instagram</a></li>
-              <li><a href="https://x-ion.com/linkedin" className="hover:text-[#2c4bff] transition-colors">LinkedIn</a></li>
-              <li><a href="https://x-ion.com/mastodon" className="hover:text-[#2c4bff] transition-colors">Mastodon</a></li>
-              <li><a href="https://x-ion.com/pinterest" className="hover:text-[#2c4bff] transition-colors">Pinterest</a></li>
-              <li>
-                <a href="https://x-ion.com/substack" className="hover:text-[#2c4bff] transition-colors inline-flex items-center gap-1.5">
-                  <span>Substack</span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.2 bg-emerald-100 text-emerald-800 rounded">New</span>
-                </a>
-              </li>
-              <li><a href="https://x-ion.com/threads" className="hover:text-[#2c4bff] transition-colors">Threads</a></li>
-              <li><a href="https://x-ion.com/tiktok" className="hover:text-[#2c4bff] transition-colors">TikTok</a></li>
-              <li><a href="https://x-ion.com/x" className="hover:text-[#2c4bff] transition-colors">X</a></li>
-              <li><a href="https://x-ion.com/youtube" className="hover:text-[#2c4bff] transition-colors">YouTube</a></li>
+              <li><Link href="/integrations?category=social#bluesky" className="hover:text-[#2c4bff] transition-colors">Bluesky</Link></li>
+              <li><Link href="/integrations?category=social#facebook" className="hover:text-[#2c4bff] transition-colors">Facebook</Link></li>
+              <li><Link href="/integrations?category=social#instagram" className="hover:text-[#2c4bff] transition-colors">Instagram</Link></li>
+              <li><Link href="/integrations?category=social#linkedin" className="hover:text-[#2c4bff] transition-colors">LinkedIn</Link></li>
+              <li><Link href="/integrations?category=social#mastodon" className="hover:text-[#2c4bff] transition-colors">Mastodon</Link></li>
+              <li><Link href="/integrations?category=social#pinterest" className="hover:text-[#2c4bff] transition-colors">Pinterest</Link></li>
+              <li><Link href="/integrations?category=social#tiktok" className="hover:text-[#2c4bff] transition-colors">TikTok</Link></li>
+              <li><Link href="/integrations?category=social#x" className="hover:text-[#2c4bff] transition-colors">X (Twitter)</Link></li>
+              <li><Link href="/integrations?category=social#youtube" className="hover:text-[#2c4bff] transition-colors">YouTube Shorts</Link></li>
             </ul>
           </div>
 
@@ -82,13 +73,12 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Made for</h4>
             <ul className="space-y-2">
-              <li><a href="#made-for" className="hover:text-[#2c4bff] transition-colors">Agencies</a></li>
-              <li><a href="#made-for" className="hover:text-[#2c4bff] transition-colors">Creators</a></li>
-              <li><a href="#made-for" className="hover:text-[#2c4bff] transition-colors">Developers</a></li>
-              <li><a href="#made-for" className="hover:text-[#2c4bff] transition-colors">Higher Education</a></li>
-              <li><a href="#made-for" className="hover:text-[#2c4bff] transition-colors">Nonprofits</a></li>
-              <li><a href="#made-for" className="hover:text-[#2c4bff] transition-colors">Small Business</a></li>
-              <li><a href="#made-for" className="hover:text-[#2c4bff] transition-colors">Startups</a></li>
+              <li><Link href="/pricing" className="hover:text-[#2c4bff] transition-colors">Agencies</Link></li>
+              <li><Link href="/pricing" className="hover:text-[#2c4bff] transition-colors">Creators</Link></li>
+              <li><Link href="/integrations#api" className="hover:text-[#2c4bff] transition-colors">Developers</Link></li>
+              <li><Link href="/about" className="hover:text-[#2c4bff] transition-colors">Nonprofits</Link></li>
+              <li><Link href="/pricing" className="hover:text-[#2c4bff] transition-colors">Small Business</Link></li>
+              <li><Link href="/about" className="hover:text-[#2c4bff] transition-colors">Startups</Link></li>
             </ul>
           </div>
 
@@ -96,10 +86,10 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Resources</h4>
             <ul className="space-y-2">
-              <li><a href="https://x-ion.com/resources/" className="hover:text-[#2c4bff] transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Our Community</a></li>
-              <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Resource Library</a></li>
-              <li><a href="https://x-ion.com/social-media-terms" className="hover:text-[#2c4bff] transition-colors">Social Media Terms Glossary</a></li>
+              <li><Link href="/blog" className="hover:text-[#2c4bff] transition-colors">Blog &amp; Stories</Link></li>
+              <li><Link href="/resources" className="hover:text-[#2c4bff] transition-colors">Free Tools Hub</Link></li>
+              <li><Link href="/resources#glossary" className="hover:text-[#2c4bff] transition-colors">Social Media Glossary</Link></li>
+              <li><Link href="/pricing" className="hover:text-[#2c4bff] transition-colors">Plans &amp; Pricing</Link></li>
             </ul>
           </div>
 
@@ -108,28 +98,25 @@ export function Footer() {
             <div className="space-y-2">
               <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Support</h4>
               <ul className="space-y-1.5">
-                <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Changelog</a></li>
-                <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Developer Docs</a></li>
-                <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Status</a></li>
+                <li><Link href="/about#support" className="hover:text-[#2c4bff] transition-colors">Help Center</Link></li>
+                <li><a href="mailto:support@scrutium.com" className="hover:text-[#2c4bff] transition-colors">Contact Support</a></li>
               </ul>
             </div>
 
             <div className="space-y-2">
               <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Transparency</h4>
               <ul className="space-y-1.5">
-                <li><a href="#about" className="hover:text-[#2c4bff] transition-colors">Open Hub</a></li>
-                <li><a href="#about" className="hover:text-[#2c4bff] transition-colors">Transparent Metrics</a></li>
-                <li><a href="#about" className="hover:text-[#2c4bff] transition-colors">Transparent Salaries</a></li>
+                <li><Link href="/about" className="hover:text-[#2c4bff] transition-colors">Open Startup Hub</Link></li>
+                <li><Link href="/about#metrics" className="hover:text-[#2c4bff] transition-colors">Live Public Metrics</Link></li>
+                <li><Link href="/about#salaries" className="hover:text-[#2c4bff] transition-colors">Open Salaries</Link></li>
               </ul>
             </div>
 
             <div className="space-y-2">
               <h4 className="font-bold text-gray-950 uppercase tracking-wider text-[11px]">Company</h4>
               <ul className="space-y-1.5">
-                <li><a href="#about" className="hover:text-[#2c4bff] transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-[#2c4bff] transition-colors">Press</a></li>
+                <li><Link href="/about" className="hover:text-[#2c4bff] transition-colors">About Us</Link></li>
+                <li><Link href="/pricing" className="hover:text-[#2c4bff] transition-colors">Pricing</Link></li>
               </ul>
             </div>
           </div>
@@ -140,7 +127,7 @@ export function Footer() {
         <div className="border border-gray-200 bg-white rounded-2xl p-5 shadow-xs">
           <button
             onClick={() => setIsAccordionOpen(!isAccordionOpen)}
-            className="w-full flex items-center justify-between text-left group"
+            className="w-full flex items-center justify-between text-left group cursor-pointer"
           >
             <div>
               <h3 className="font-bold text-sm text-gray-900 group-hover:text-[#2c4bff] transition-colors">
@@ -160,47 +147,30 @@ export function Footer() {
               <div className="space-y-2.5">
                 <h4 className="font-bold text-gray-900 uppercase font-mono text-[11px]">Free Tools</h4>
                 <ul className="space-y-1.5 text-gray-600">
-                  <li><a href="#" className="hover:text-[#2c4bff]">AI Hashtag Generator</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">AI Social Media Post Generator</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Blog to Social Media Post Generator</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Facebook Image Resizer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Free Link in Bio</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Instagram Bio Generator</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Instagram Hashtag Generator</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Social Media Image Resizer</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Social Media Scheduler</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">TikTok Username Generator</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">UTM Generator</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff] font-semibold text-[#2c4bff]">All Free Tools →</a></li>
+                  <li><Link href="/resources" className="hover:text-[#2c4bff]">Social Bio Generator</Link></li>
+                  <li><Link href="/resources#counter" className="hover:text-[#2c4bff]">Live Character Counter</Link></li>
+                  <li><Link href="/features/start-page" className="hover:text-[#2c4bff]">Free Link in Bio</Link></li>
+                  <li><Link href="/resources" className="hover:text-[#2c4bff] font-semibold text-[#2c4bff]">All Free Tools Hub →</Link></li>
                 </ul>
               </div>
 
               <div className="space-y-2.5">
                 <h4 className="font-bold text-gray-900 uppercase font-mono text-[11px]">Social Media Insights</h4>
                 <ul className="space-y-1.5 text-gray-600">
-                  <li><a href="#" className="hover:text-[#2c4bff]">Facebook Benchmarks</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Instagram Benchmarks</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Best Time to Post on Instagram</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Best Time to Post on LinkedIn</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Best Time to Post on TikTok</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Best Time to Post on Facebook</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Best Time to Post on Threads</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Best Time to Post on X</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff] font-semibold text-[#2c4bff]">All Social Media Benchmarks →</a></li>
+                  <li><Link href="/features/insights" className="hover:text-[#2c4bff]">Best Time to Post Analytics</Link></li>
+                  <li><Link href="/features/insights" className="hover:text-[#2c4bff]">Instagram Benchmarks</Link></li>
+                  <li><Link href="/features/insights" className="hover:text-[#2c4bff]">TikTok &amp; LinkedIn Trends</Link></li>
+                  <li><Link href="/features/insights" className="hover:text-[#2c4bff] font-semibold text-[#2c4bff]">Insights Dashboard →</Link></li>
                 </ul>
               </div>
 
               <div className="space-y-2.5">
-                <h4 className="font-bold text-gray-900 uppercase font-mono text-[11px]">Compare X-ion</h4>
+                <h4 className="font-bold text-gray-900 uppercase font-mono text-[11px]">Platform Directory</h4>
                 <ul className="space-y-1.5 text-gray-600">
-                  <li><a href="#" className="hover:text-[#2c4bff]">Agorapulse vs X-ion</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">eClincher vs X-ion</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Hootsuite vs X-ion</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Later vs X-ion</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Loomly vs X-ion</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Meta Business Suite vs X-ion</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Metricool vs X-ion</a></li>
-                  <li><a href="#" className="hover:text-[#2c4bff]">Sprout Social vs X-ion</a></li>
+                  <li><Link href="/integrations" className="hover:text-[#2c4bff]">12+ Social Channels</Link></li>
+                  <li><Link href="/integrations" className="hover:text-[#2c4bff]">Canva &amp; Media Tools</Link></li>
+                  <li><Link href="/integrations#api" className="hover:text-[#2c4bff]">REST API &amp; MCP Integration</Link></li>
+                  <li><Link href="/integrations" className="hover:text-[#2c4bff] font-semibold text-[#2c4bff]">All Integrations →</Link></li>
                 </ul>
               </div>
             </div>
@@ -210,15 +180,15 @@ export function Footer() {
         {/* Bottom Trailing Bar */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-gray-500">
           <div className="flex items-center gap-6">
-            <a href="#" className="text-gray-900 hover:opacity-80">
+            <Link href="/" className="text-gray-950 hover:opacity-80">
               <BufferLogo width={100} height={28} />
-            </a>
+            </Link>
 
             {/* Language Selector Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 transition-colors font-medium text-xs"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 transition-colors font-medium text-xs cursor-pointer"
               >
                 <Globe className="w-3.5 h-3.5 text-gray-500" />
                 <span>{selectedLanguage}</span>
@@ -234,7 +204,7 @@ export function Footer() {
                         setSelectedLanguage(lang);
                         setIsLanguageOpen(false);
                       }}
-                      className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors ${
+                      className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors cursor-pointer ${
                         selectedLanguage === lang ? 'bg-blue-50 text-[#2c4bff] font-bold' : 'text-gray-700 hover:bg-gray-50'
                       }`}
                     >
@@ -271,12 +241,10 @@ export function Footer() {
           {/* Policies & Copyright */}
           <div className="flex items-center gap-3 text-xs">
             <span>Copyright © 2026 X-ion Inc.</span>
-            <span>|</span>
-            <a href="https://x-ion.com/legal#privacy-policy" className="hover:underline">Privacy</a>
-            <span>|</span>
-            <a href="https://x-ion.com/legal#terms" className="hover:underline">Terms</a>
-            <span>|</span>
-            <a href="https://x-ion.com/legal#security" className="hover:underline">Security</a>
+            <span>·</span>
+            <Link href="/about" className="hover:underline">Transparency</Link>
+            <span>·</span>
+            <Link href="/pricing" className="hover:underline">Pricing</Link>
           </div>
         </div>
 

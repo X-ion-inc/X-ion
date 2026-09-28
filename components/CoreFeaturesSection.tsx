@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { ArrowRight, Calendar, Sparkles, Check, MessageSquare, ThumbsUp, Send, TrendingUp, BarChart3, Plus } from 'lucide-react';
 import { CORE_FEATURES } from '@/lib/bufferData';
 import { getChannelIcon } from './icons/ChannelLogos';
@@ -20,9 +21,9 @@ export function CoreFeaturesSection() {
                 Publish
               </span>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://x-ion.com/publish" className="hover:underline">
+                <Link href="/features/publish" className="hover:underline">
                   The most complete set of publishing integrations, ever
-                </a>
+                </Link>
               </h3>
 
               {/* Interactive preview illustration of X-ion Publish */}
@@ -69,13 +70,13 @@ export function CoreFeaturesSection() {
               <p className="text-sm text-gray-700 leading-relaxed">
                 Schedule your content to the most popular platforms including Facebook, Instagram, TikTok, LinkedIn, Threads, Bluesky, YouTube Shorts, Pinterest, Google Business, Mastodon and X.
               </p>
-              <a 
-                href="https://x-ion.com/publish"
+              <Link 
+                href="/features/publish"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-pink-700 hover:text-pink-900 group"
               >
-                <span>Learn more</span>
+                <span>Learn more about Publish</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -86,9 +87,9 @@ export function CoreFeaturesSection() {
                 Create
               </span>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://x-ion.com/create" className="hover:underline">
+                <Link href="/features/create" className="hover:underline">
                   Turn any idea into the perfect post
-                </a>
+                </Link>
               </h3>
 
               {/* Interactive preview illustration of X-ion Create Ideas */}
@@ -107,10 +108,10 @@ export function CoreFeaturesSection() {
                       </button>
                     ))}
                   </div>
-                  <button className="flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg">
+                  <span className="flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg">
                     <Plus className="w-3.5 h-3.5" />
                     New Idea
-                  </button>
+                  </span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-emerald-50/50 border border-emerald-100 space-y-2 text-xs">
@@ -133,13 +134,13 @@ export function CoreFeaturesSection() {
               <p className="text-sm text-gray-700 leading-relaxed">
                 Whether you’re flying solo or working with a team, X-ion has all the features to help you create, organize, and repurpose your content for any channel. There’s also an AI Assistant if you need it.
               </p>
-              <a 
-                href="https://x-ion.com/create"
+              <Link 
+                href="/features/create"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-emerald-700 hover:text-emerald-900 group"
               >
-                <span>Learn more</span>
+                <span>Learn more about Create</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -150,9 +151,9 @@ export function CoreFeaturesSection() {
                 Community
               </span>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://x-ion.com/community" className="hover:underline">
+                <Link href="/features/community" className="hover:underline">
                   Reply to comments in a flash
-                </a>
+                </Link>
               </h3>
 
               {/* Interactive preview illustration of Community comments inbox */}
@@ -191,13 +192,13 @@ export function CoreFeaturesSection() {
               <p className="text-sm text-gray-700 leading-relaxed">
                 Engage with your audience across all your channels at 10x speed. X-ion will help you triage and respond to comments from one simple dashboard.
               </p>
-              <a 
-                href="https://x-ion.com/community"
+              <Link 
+                href="/features/community"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-amber-800 hover:text-amber-950 group"
               >
-                <span>Learn more</span>
+                <span>Learn more about Community</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -213,9 +214,9 @@ export function CoreFeaturesSection() {
                 </span>
               </div>
               <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-gray-950 tracking-tight leading-snug">
-                <a href="https://x-ion.com/insights" className="hover:underline">
+                <Link href="/features/insights" className="hover:underline">
                   Answers, not just analytics
-                </a>
+                </Link>
               </h3>
 
               {/* Interactive preview illustration of Insights analytics chart */}
@@ -252,13 +253,13 @@ export function CoreFeaturesSection() {
               <p className="text-sm text-gray-700 leading-relaxed">
                 Whether it’s basic analytics or in-depth reporting, X-ion will help you learn what works and how to improve.
               </p>
-              <a 
-                href="https://x-ion.com/insights"
+              <Link 
+                href="/features/insights"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-blue-700 hover:text-blue-900 group"
               >
-                <span>Learn more</span>
+                <span>Learn more about Insights</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
 

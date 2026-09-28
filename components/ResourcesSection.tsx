@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, BookOpen, Clock, FileText, Wrench, Sparkles } from 'lucide-react';
 import { RESOURCES_LIST } from '@/lib/bufferData';
 
@@ -47,7 +48,7 @@ export function ResourcesSection() {
         {/* Resources Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {RESOURCES_LIST.map((item) => (
-            <a
+            <Link
               key={item.id}
               href={item.href}
               className={`rounded-3xl p-7 border transition-all hover:shadow-md flex flex-col justify-between group ${getThemeStyle(item.theme)}`}
@@ -70,7 +71,7 @@ export function ResourcesSection() {
                 <span>Explore guide</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

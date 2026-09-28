@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, Users, Smartphone, Globe, Sparkles } from 'lucide-react';
 import { MORE_FEATURES } from '@/lib/bufferData';
 
@@ -44,9 +45,9 @@ export function MoreFeaturesSection() {
                 </div>
 
                 <h3 className="text-xl font-bold text-gray-950 tracking-tight">
-                  <a href={item.href} className="hover:underline">
+                  <Link href={item.href} className="hover:underline">
                     {item.heading}
-                  </a>
+                  </Link>
                 </h3>
 
                 <p className="mt-2.5 text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -55,13 +56,13 @@ export function MoreFeaturesSection() {
               </div>
 
               <div className="mt-6 pt-4 border-t border-black/5">
-                <a
+                <Link
                   href={item.href}
                   className="inline-flex items-center gap-1 text-xs font-bold text-gray-900 hover:text-[#2c4bff] group"
                 >
                   <span>Learn more</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             </div>
           ))}

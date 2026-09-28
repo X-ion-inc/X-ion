@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "X-ion: Social media management for everyone",
@@ -31,8 +33,12 @@ export default function RootLayout({
         <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
       </head>
-      <body className="min-h-screen bg-[#fafafa] text-gray-900 antialiased selection:bg-blue-100 selection:text-blue-900">
-        {children}
+      <body className="min-h-screen bg-[#fafafa] text-gray-900 antialiased selection:bg-blue-100 selection:text-blue-900 flex flex-col">
+        <Navbar />
+        <main className="flex-1 overflow-x-clip">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
