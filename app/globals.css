@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@view-transition {
+  navigation: auto;
+}
+
 @layer base {
   html.lenis, html.lenis body {
     height: auto;

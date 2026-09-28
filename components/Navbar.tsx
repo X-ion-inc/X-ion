@@ -46,7 +46,7 @@ export function Navbar() {
       <nav ref={navRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Leading: Logo */}
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center text-gray-950 hover:opacity-90 transition-opacity">
+          <Link href="/" prefetch={true} className="flex items-center text-gray-950 hover:opacity-90 transition-opacity">
             <BufferLogo width={120} height={32} />
           </Link>
 
@@ -72,6 +72,7 @@ export function Navbar() {
                 <div className="absolute top-full left-0 mt-2 w-[540px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 grid grid-cols-2 gap-2 animate-in fade-in zoom-in-95 duration-150">
                   <Link 
                     href="/features/publish" 
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)} 
                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                   >
@@ -86,6 +87,7 @@ export function Navbar() {
 
                   <Link 
                     href="/features/create" 
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)} 
                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                   >
@@ -100,6 +102,7 @@ export function Navbar() {
 
                   <Link 
                     href="/features/insights" 
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)} 
                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                   >
@@ -117,6 +120,7 @@ export function Navbar() {
 
                   <Link 
                     href="/features/community" 
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)} 
                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                   >
@@ -131,6 +135,7 @@ export function Navbar() {
 
                   <Link 
                     href="/features/start-page" 
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)} 
                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                   >
@@ -145,6 +150,7 @@ export function Navbar() {
 
                   <Link 
                     href="/features/create#ai" 
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)} 
                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                   >
@@ -159,6 +165,7 @@ export function Navbar() {
 
                   <Link 
                     href="/integrations" 
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)} 
                     className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group col-span-2 border-t border-gray-100 pt-2"
                   >
@@ -203,6 +210,7 @@ export function Navbar() {
                         <Link
                           key={ch.id}
                           href={`/integrations?category=social#${ch.id}`}
+                          prefetch={true}
                           onClick={() => setOpenDropdown(null)}
                           className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-gray-50 text-gray-800 text-xs font-medium transition-colors"
                         >
@@ -224,6 +232,7 @@ export function Navbar() {
                           <Link
                             key={tool.id}
                             href={`/integrations?category=tools#${tool.id}`}
+                            prefetch={true}
                             onClick={() => setOpenDropdown(null)}
                             className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-gray-50 text-gray-800 text-xs font-medium transition-colors"
                           >
@@ -236,6 +245,7 @@ export function Navbar() {
 
                     <Link 
                       href="/integrations" 
+                      prefetch={true}
                       onClick={() => setOpenDropdown(null)}
                       className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-[#2c4bff] hover:underline"
                     >
@@ -267,6 +277,7 @@ export function Navbar() {
                 <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 p-3 space-y-1 animate-in fade-in zoom-in-95 duration-150">
                   <Link
                     href="/resources"
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)}
                     className="block p-2.5 rounded-xl hover:bg-gray-50 transition-colors"
                   >
@@ -276,6 +287,7 @@ export function Navbar() {
 
                   <Link
                     href="/blog"
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)}
                     className="block p-2.5 rounded-xl hover:bg-gray-50 transition-colors"
                   >
@@ -285,6 +297,7 @@ export function Navbar() {
 
                   <Link
                     href="/resources#glossary"
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)}
                     className="block p-2.5 rounded-xl hover:bg-gray-50 transition-colors"
                   >
@@ -294,6 +307,7 @@ export function Navbar() {
 
                   <Link
                     href="/about"
+                    prefetch={true}
                     onClick={() => setOpenDropdown(null)}
                     className="block p-2.5 rounded-xl hover:bg-gray-50 transition-colors"
                   >
@@ -307,6 +321,7 @@ export function Navbar() {
             {/* Pricing link */}
             <Link
               href="/pricing"
+              prefetch={true}
               className="px-3.5 py-2 text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-50 rounded-lg transition-colors"
             >
               Pricing
@@ -315,6 +330,7 @@ export function Navbar() {
             {/* About link */}
             <Link
               href="/about"
+              prefetch={true}
               className="px-3.5 py-2 text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-50 rounded-lg transition-colors"
             >
               About
@@ -323,6 +339,7 @@ export function Navbar() {
             {/* Blog link */}
             <Link
               href="/blog"
+              prefetch={true}
               className="px-3.5 py-2 text-sm font-medium text-gray-700 hover:text-gray-950 hover:bg-gray-50 rounded-lg transition-colors"
             >
               Blog
@@ -364,16 +381,16 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3 max-h-[85vh] overflow-y-auto shadow-xl">
           <div className="space-y-1">
-            <Link href="/features/publish" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Publish</Link>
-            <Link href="/features/create" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Create</Link>
-            <Link href="/features/insights" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Insights</Link>
-            <Link href="/features/community" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Community</Link>
-            <Link href="/features/start-page" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Start Page</Link>
-            <Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Pricing</Link>
-            <Link href="/integrations" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Integrations</Link>
-            <Link href="/resources" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Resources &amp; Free Tools</Link>
-            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Blog</Link>
-            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">About &amp; Transparency</Link>
+            <Link href="/features/publish" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Publish</Link>
+            <Link href="/features/create" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Create</Link>
+            <Link href="/features/insights" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Insights</Link>
+            <Link href="/features/community" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Community</Link>
+            <Link href="/features/start-page" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Start Page</Link>
+            <Link href="/pricing" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Pricing</Link>
+            <Link href="/integrations" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Integrations</Link>
+            <Link href="/resources" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Resources &amp; Free Tools</Link>
+            <Link href="/blog" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">Blog</Link>
+            <Link href="/about" prefetch={true} onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-gray-900">About &amp; Transparency</Link>
           </div>
 
           <div className="pt-4 border-t border-gray-100 flex flex-col gap-2">
