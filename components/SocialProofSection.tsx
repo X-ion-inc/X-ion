@@ -1,14 +1,53 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SOCIAL_PROOF_BRANDS } from '@/lib/bufferData';
 
 export function SocialProofSection() {
+  const target = 398679;
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTimestamp: number | null = null;
+    const duration = 2000; // 2 seconds smooth count-up
+
+    let animationFrameId: number;
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const elapsed = timestamp - startTimestamp;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Smooth ease-out cubic curve
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(easeOut * target);
+
+      setCount(current);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
+      } else {
+        setCount(target);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, []);
+
   return (
     <section className="py-12 bg-white border-y border-gray-100 overflow-hidden" aria-label="Social proof">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-          <span aria-hidden="true">273,098</span><span className="visually-hidden">273,098</span> creators, brands, and agencies using Scrutium
+          <span className="tabular-nums font-extrabold text-gray-950 inline-block">
+            {count.toLocaleString('en-US')}
+          </span>{' '}
+          creators, brands, and agencies using Scrutium
         </h2>
       </div>
 

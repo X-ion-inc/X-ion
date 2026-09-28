@@ -153,7 +153,7 @@ export const RESOURCES_LIST: ResourceCardItem[] = [
 ];
 
 export const OPEN_METRICS = {
-  mau: '273,098',
+  mau: '398,679',
   mauSubtitle: 'Monthly active users',
   customers: '81,756',
   customersSubtitle: 'Total customers',

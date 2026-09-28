@@ -6,7 +6,7 @@ import { Wrench, Copy, Check, Sparkles, BookOpen, FileText, ArrowRight, HelpCirc
 
 export default function ResourcesPage() {
   // Character counter state
-  const [inputText, setInputText] = useState('Excited to announce our new product update! 🚀 Over 273k creators use X-ion to schedule, analyze, and build meaningful relationships across social media. #marketing #saas #socialmedia');
+  const [inputText, setInputText] = useState('Excited to announce our new product update! 🚀 Over 398k creators use Scrutium to schedule, analyze, and build meaningful relationships across social media. #marketing #saas #socialmedia');
 
   // Bio generator state
   const [bioIndustry, setBioIndustry] = useState<'saas' | 'creator' | 'ecommerce' | 'agency'>('saas');

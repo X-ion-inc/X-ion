@@ -18,7 +18,7 @@ export default function Home() {
       {/* 1. Hero Section */}
       <HeroSection />
 
-      {/* 2. Social Proof 273,098 creators & Marquee */}
+      {/* 2. Social Proof 398,679 creators & Marquee */}
       <SocialProofSection />
 
       {/* 3. Core Features: Publish, Create, Community, Insights */}
