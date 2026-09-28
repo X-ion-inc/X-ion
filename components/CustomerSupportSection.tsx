@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, Heart, Globe2, MessageCircle, HelpCircle } from 'lucide-react';
 
 export function CustomerSupportSection() {
@@ -49,13 +50,14 @@ export function CustomerSupportSection() {
             </p>
 
             <div>
-              <a
-                href="https://x-ion.com/about"
+              <Link
+                href="/about"
+                prefetch={true}
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-900 hover:text-[#2c4bff] transition-colors group"
               >
                 <span>Learn more about our global team</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
 

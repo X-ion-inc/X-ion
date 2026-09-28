@@ -3,6 +3,9 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { PageTransition } from "@/components/PageTransition";
+import { TopProgressBar } from "@/components/TopProgressBar";
+import { RoutePrefetcher } from "@/components/RoutePrefetcher";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://x-ion.com"),
@@ -54,10 +57,12 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo/logo.png" />
       </head>
       <body className="min-h-screen bg-[#fafafa] text-gray-900 antialiased selection:bg-blue-100 selection:text-blue-900 flex flex-col">
+        <TopProgressBar />
+        <RoutePrefetcher />
         <SmoothScroll />
         <Navbar />
-        <main className="flex-1 overflow-x-clip">
-          {children}
+        <main className="flex-1 overflow-x-clip flex flex-col">
+          <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
       </body>

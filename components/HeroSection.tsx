@@ -72,12 +72,12 @@ export function HeroSection() {
       </div>
 
       {/* Main Center Content */}
-      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center z-20">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight text-white leading-[1.12] drop-shadow-md">
+      <div className="relative max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 text-center z-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold tracking-tight text-white leading-[1.16] drop-shadow-md">
           The Operating System for Modern Campaigns
         </h1>
 
-        <p className="mt-5 text-lg sm:text-xl text-gray-200 max-w-xl mx-auto leading-relaxed font-normal drop-shadow">
+        <p className="mt-5 text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-normal drop-shadow">
           Coordinate Campaigns. Monitor Performance. Drive Results.
         </p>
 

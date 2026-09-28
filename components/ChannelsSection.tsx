@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { CHANNELS } from '@/lib/bufferData';
 import { getChannelIcon } from './icons/ChannelLogos';
@@ -26,9 +27,10 @@ export function ChannelsSection() {
         {/* Channels Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {CHANNELS.map((ch) => (
-            <a
+            <Link
               key={ch.id}
               href={ch.href}
+              prefetch={true}
               className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all flex flex-col items-center justify-center text-center group"
             >
               <div 
@@ -46,7 +48,7 @@ export function ChannelsSection() {
                 <span>Scrutium × {ch.name.split(' ')[0]}</span>
                 <ArrowRight className="w-2.5 h-2.5" />
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
