@@ -47,7 +47,7 @@ export const CORE_FEATURES: CoreFeatureItem[] = [
     href: '/features/publish',
     theme: 'fuscia',
     description: 'Schedule your content to the most popular platforms including Facebook, Instagram, TikTok, LinkedIn, Threads, Bluesky, YouTube Shorts, Pinterest, Google Business, Mastodon and X.',
-    imageAlt: 'X-ion Publish space with a queue for multiple social media accounts, a calendar view, and scheduling options.',
+    imageAlt: 'Scrutium Publish space with a queue for multiple social media accounts, a calendar view, and scheduling options.',
   },
   {
     id: 'create',
@@ -55,8 +55,8 @@ export const CORE_FEATURES: CoreFeatureItem[] = [
     heading: 'Turn any idea into the perfect post',
     href: '/features/create',
     theme: 'green',
-    description: 'Whether you’re flying solo or working with a team, X-ion has all the features to help you create, organize, and repurpose your content for any channel. There’s also an AI Assistant if you need it.',
-    imageAlt: 'X-ion Create space with columns and sorting for content ideas, including an AI Assistant for generating posts and refining content.',
+    description: 'Whether you’re flying solo or working with a team, Scrutium helps teams create, organize, and repurpose content for any channel. There’s also an AI Assistant if you need it.',
+    imageAlt: 'Scrutium Create space with columns and sorting for content ideas, including an AI Assistant for generating posts and refining content.',
   },
   {
     id: 'community',
@@ -64,8 +64,8 @@ export const CORE_FEATURES: CoreFeatureItem[] = [
     heading: 'Reply to comments in a flash',
     href: '/features/community',
     theme: 'yellow',
-    description: 'Engage with your audience across all your channels at 10x speed. X-ion will help you triage and respond to comments from one simple dashboard.',
-    imageAlt: 'X-ion Community space with filterable and sortable comments across multiple social media accounts.',
+    description: 'Engage with your audience across all your channels at 10x speed. Scrutium will help you triage and respond to comments from one simple dashboard.',
+    imageAlt: 'Scrutium Community space with filterable and sortable comments across multiple social media accounts.',
   },
   {
     id: 'insights',
@@ -73,8 +73,8 @@ export const CORE_FEATURES: CoreFeatureItem[] = [
     heading: 'Answers, not just analytics',
     href: '/features/insights',
     theme: 'blue',
-    description: 'Whether it’s basic analytics or in-depth reporting, X-ion will help you learn what works and how to improve.',
-    imageAlt: 'X-ion Insights showing an all-channels report with top posts and a posts-by-month chart.',
+    description: 'Whether it’s basic analytics or in-depth reporting, Scrutium will help you learn what works and how to improve.',
+    imageAlt: 'Scrutium Insights showing an all-channels report with top posts and a posts-by-month chart.',
     badge: 'New',
   },
 ];
@@ -86,7 +86,7 @@ export const MORE_FEATURES: MoreFeatureItem[] = [
     href: '/features/publish',
     theme: 'coral',
     description: 'Manage, edit, and approve social media posts from your team.',
-    imageAlt: 'X-ion Collaborate space with a publishing calendar and team approval workflows.',
+    imageAlt: 'Scrutium Collaborate space with a publishing calendar and team approval workflows.',
   },
   {
     id: 'mobile-app',
@@ -94,7 +94,7 @@ export const MORE_FEATURES: MoreFeatureItem[] = [
     href: '/features/publish',
     theme: 'purple',
     description: 'Manage your social media accounts from anywhere.',
-    imageAlt: 'X-ion mobile app with multiple social media accounts and a publishing queue.',
+    imageAlt: 'Scrutium mobile app with multiple social media accounts and a publishing queue.',
   },
   {
     id: 'start-page',
@@ -102,7 +102,7 @@ export const MORE_FEATURES: MoreFeatureItem[] = [
     href: '/features/start-page',
     theme: 'orange',
     description: 'Turn your social bio into a powerful, personalized hub.',
-    imageAlt: 'X-ion Start Page social bio with custom theming, images, and links.',
+    imageAlt: 'Scrutium Start Page social bio with custom theming, images, and links.',
   },
   {
     id: 'ai-assistant',
@@ -110,7 +110,7 @@ export const MORE_FEATURES: MoreFeatureItem[] = [
     href: '/features/create#ai',
     theme: 'aqua',
     description: 'Brainstorm ideas, rewrite content, and craft platform-specific posts.',
-    imageAlt: 'X-ion AI Assistant with options to generate posts from prompts and refine content.',
+    imageAlt: 'Scrutium AI Assistant with options to generate posts from prompts and refine content.',
   },
 ];
 

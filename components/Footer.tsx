@@ -36,7 +36,7 @@ export function Footer() {
               <li><Link href="/features/insights" className="hover:text-[#2c4bff] transition-colors">Insights</Link></li>
               <li><Link href="/features/community" className="hover:text-[#2c4bff] transition-colors">Community</Link></li>
               <li><Link href="/features/start-page" className="hover:text-[#2c4bff] transition-colors">Start Page</Link></li>
-              <li><Link href="/integrations" className="hover:text-[#2c4bff] transition-colors">X-ion API &amp; MCP</Link></li>
+              <li><Link href="/integrations" className="hover:text-[#2c4bff] transition-colors">Scrutium API &amp; MCP</Link></li>
             </ul>
           </div>
 

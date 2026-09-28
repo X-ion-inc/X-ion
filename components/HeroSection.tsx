@@ -111,7 +111,7 @@ export function HeroSection() {
           </form>
 
           <p className="text-xs text-gray-300">
-            By entering your email, you agree to receive emails from X-ion.
+            By entering your email, you agree to receive emails from Scrutium.
           </p>
         </div>
       </div>

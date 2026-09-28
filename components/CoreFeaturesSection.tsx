@@ -26,7 +26,7 @@ export function CoreFeaturesSection() {
                 </Link>
               </h3>
 
-              {/* Interactive preview illustration of X-ion Publish */}
+              {/* Interactive preview illustration of Scrutium Publish */}
               <div className="mt-8 rounded-2xl bg-white border border-pink-100 shadow-sm p-4 sm:p-5 space-y-3.5 select-none">
                 <div className="flex items-center justify-between pb-3 border-b border-gray-100 text-xs">
                   <div className="flex items-center gap-2 font-semibold text-gray-900">
@@ -92,7 +92,7 @@ export function CoreFeaturesSection() {
                 </Link>
               </h3>
 
-              {/* Interactive preview illustration of X-ion Create Ideas */}
+              {/* Interactive preview illustration of Scrutium Create Ideas */}
               <div className="mt-8 rounded-2xl bg-white border border-emerald-100 shadow-sm p-4 sm:p-5 space-y-3.5 select-none">
                 <div className="flex items-center justify-between pb-3 border-b border-gray-100 text-xs">
                   <div className="flex items-center gap-1.5 bg-gray-100 p-1 rounded-lg">
@@ -132,7 +132,7 @@ export function CoreFeaturesSection() {
 
             <div className="mt-8 pt-6 border-t border-emerald-200/60">
               <p className="text-sm text-gray-700 leading-relaxed">
-                Whether you’re flying solo or working with a team, X-ion has all the features to help you create, organize, and repurpose your content for any channel. There’s also an AI Assistant if you need it.
+                Whether you’re flying solo or working with a team, Scrutium helps teams create, organize, and repurpose content for any channel. There’s also an AI Assistant if you need it.
               </p>
               <Link 
                 href="/features/create"
@@ -190,7 +190,7 @@ export function CoreFeaturesSection() {
 
             <div className="mt-8 pt-6 border-t border-amber-200/60">
               <p className="text-sm text-gray-700 leading-relaxed">
-                Engage with your audience across all your channels at 10x speed. X-ion will help you triage and respond to comments from one simple dashboard.
+                Engage with your audience across all your channels at 10x speed. Scrutium will help you triage and respond to comments from one simple dashboard.
               </p>
               <Link 
                 href="/features/community"
@@ -251,7 +251,7 @@ export function CoreFeaturesSection() {
 
             <div className="mt-8 pt-6 border-t border-blue-200/60">
               <p className="text-sm text-gray-700 leading-relaxed">
-                Whether it’s basic analytics or in-depth reporting, X-ion will help you learn what works and how to improve.
+                Whether it’s basic analytics or in-depth reporting, Scrutium will help you learn what works and how to improve.
               </p>
               <Link 
                 href="/features/insights"

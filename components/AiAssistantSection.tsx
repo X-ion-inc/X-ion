@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Sparkles, Send, Bot, CheckCircle2, Copy } from 'lucide-react';
 
 export function AiAssistantSection() {
-  const [promptText, setPromptText] = useState('Review the last 6 months of my posts in X-ion and tell me which posts have the most engagement.');
+  const [promptText, setPromptText] = useState('Review the last 6 months of my posts in Scrutium and tell me which posts have the most engagement.');
   const [chatResponse, setChatResponse] = useState<string | null>(null);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -13,7 +13,7 @@ export function AiAssistantSection() {
     setChatResponse(null);
     setTimeout(() => {
       setIsTyping(false);
-      setChatResponse(`Based on your X-ion analytics across LinkedIn, X, and Instagram for the past 6 months:
+      setChatResponse(`Based on your Scrutium analytics across LinkedIn, X, and Instagram for the past 6 months:
 
 1. 🚀 "How we reached $26M ARR with 73 people" (LinkedIn) - 14,200 reactions, 420 comments, 8.4% engagement rate.
 2. 💡 "The 3-step framework for sustainable creator growth" (Instagram Reel) - 89,400 views, 1,280 shares.
@@ -40,13 +40,13 @@ Shall I draft 3 follow-up post ideas based on post #1 and queue them for next Tu
             </div>
 
             <p className="text-base text-gray-600 leading-relaxed font-normal">
-              Connect X-ion to Claude or ChatGPT and manage your whole workflow from a conversation. Pull your performance data, plan content around what’s working, and send content straight to your queue.
+              Connect Scrutium to Claude or ChatGPT and manage your whole workflow from a conversation. Pull your performance data, plan content around what’s working, and send content straight to your queue.
             </p>
 
             <ul className="space-y-4 pt-2">
               <li className="flex items-start gap-3 text-sm text-gray-700">
                 <span className="font-bold text-gray-950 shrink-0">Ask:</span>
-                <span>“What were my top posts this month?” Your AI pulls real numbers from X-ion.</span>
+                <span>“What were my top posts this month?” Your AI pulls real numbers from Scrutium.</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-gray-700">
                 <span className="font-bold text-gray-950 shrink-0">Plan:</span>
@@ -54,7 +54,7 @@ Shall I draft 3 follow-up post ideas based on post #1 and queue them for next Tu
               </li>
               <li className="flex items-start gap-3 text-sm text-gray-700">
                 <span className="font-bold text-gray-950 shrink-0">Post:</span>
-                <span>Content lands in your X-ion queue, ready to post.</span>
+                <span>Content lands in your Scrutium queue, ready to post.</span>
               </li>
             </ul>
 
@@ -87,7 +87,7 @@ Shall I draft 3 follow-up post ideas based on post #1 and queue them for next Tu
                     <Sparkles className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-bold text-sm text-gray-900">Claude × X-ion MCP</span>
+                    <span className="font-bold text-sm text-gray-900">Claude × Scrutium MCP</span>
                     <span className="text-[10px] text-gray-400 block font-mono">Agent Protocol v1.4</span>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ Shall I draft 3 follow-up post ideas based on post #1 and queue them for next Tu
                 {isTyping ? (
                   <div className="flex items-center gap-2 text-gray-400 py-3">
                     <Bot className="w-4 h-4 animate-spin text-[#2c4bff]" />
-                    <span className="font-mono text-xs">Calling tool: `xion.get_posts_analytics(window='6m')`...</span>
+                    <span className="font-mono text-xs">Calling tool: `scrutium.get_posts_analytics(window='6m')`...</span>
                   </div>
                 ) : chatResponse ? (
                   <div className="flex items-start gap-2.5">
@@ -123,7 +123,7 @@ Shall I draft 3 follow-up post ideas based on post #1 and queue them for next Tu
                   </div>
                 ) : (
                   <div className="text-center py-6 text-gray-400 font-mono text-[11px]">
-                    Click &ldquo;Send Query&rdquo; below to simulate Claude querying X-ion MCP.
+                    Click &ldquo;Send Query&rdquo; below to simulate Claude querying Scrutium MCP.
                   </div>
                 )}
               </div>
